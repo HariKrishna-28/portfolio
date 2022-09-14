@@ -19,7 +19,7 @@ const Header = () => {
                 <div className='p-5'>
                     <div>
                         <div className='flex items-center gap-3 '>
-                            <img src={WaveGif} alt="" className='hidden md:block lg:block w-16' />
+                            <img src={WaveGif} alt="" draggable='false' className='hidden md:block lg:block w-16' />
                             {/* <span className='hidden md:block lg:block text-3xl'>
                                 👋
                             </span> */}

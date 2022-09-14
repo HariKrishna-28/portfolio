@@ -12,7 +12,7 @@ import {
 function App() {
   return (
     <div>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 select-none">
         <NavBar />
         <Header />
         <About />
