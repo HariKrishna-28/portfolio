@@ -72,6 +72,7 @@ const Ts = () => {
                 techStack.map(({ name, address }, index) => {
                     return (
                         <Tooltip
+                            key={index}
                             placement={index % 2 === 0 ? "left" : "right"}
                             TransitionComponent={Zoom}
                             TransitionProps={{ timeout: 400 }}

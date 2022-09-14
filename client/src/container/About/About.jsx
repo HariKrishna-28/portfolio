@@ -1,13 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Express, Git, JavaScript, Mongo, NodeJs, ReactJs, Typescript } from '../../assets'
+// import { Express, Git, JavaScript, Mongo, NodeJs, ReactJs, Typescript } from '../../assets'
 import Ts from './Ts'
 
 
 
 const About = () => {
     return (
-        <div className='flex flex-col gap-5 p-10' id='About'>
+        <div className='flex flex-col gap-10 p-10' id='About'>
             {/* <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}> */}
@@ -20,10 +20,9 @@ const About = () => {
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}>
-                <div className='flex justify-center'>
-                    <div className='w-full  md:w-1/2 lg:w-1/2 text-justify text-xl p-5 rounded'>
-                        I am a self taught full stack developer and python programmer.
-                        I seek challenging opportunities where I can fully use my skills to the success of the organisation.
+                <div className='flex justify-center text-gray-600'>
+                    <div className='w-full md:w-3/4 lg:w-3/4 text-justify font-semibold text-2xl '>
+                        I am a self taught <span className='text-black'>full stack MERN developer</span> and <span className='text-black'>python programmer</span>. I seek challenging opportunities where I can fully use my skills to the success of the organisation.
                     </div>
                 </div>
             </motion.div>
@@ -44,13 +43,6 @@ const About = () => {
                 whileInView={{ y: [+100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}>
                 <div className='flex flex-wrap md:hidden lg:hidden gap-3 items-evenly justify-center'>
-                    {/* <img src={NodeJs} alt="" className='w-10' draggable="false" />
-                    <img src={Express} alt="" className='w-10' draggable="false" />
-                    <img src={Git} alt="" className='w-10' draggable="false" />
-                    <img src={JavaScript} alt="" className='w-10' draggable="false" />
-                    <img src={Typescript} alt="" className='w-10' draggable="false" />
-                    <img src={ReactJs} alt="" className='w-10' draggable="false" />
-                    <img src={Mongo} alt="" className='w-10' draggable="false" /> */}
                     <Ts />
                 </div>
             </motion.div>
