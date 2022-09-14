@@ -16,7 +16,8 @@ const Ts = () => {
             <img src={Python} alt="" className='w-8 cursor-pointer' draggable="false" />
             <img src={BootStrap} alt="" className='w-8 cursor-pointer' draggable="false" />
             <img src={Tailwind} alt="" className='w-8 cursor-pointer' draggable="false" />
-            <img src={Firebase} alt="" className='w-8 cursor-pointer' draggable="false" /></>
+            <img src={Firebase} alt="" className='w-8 cursor-pointer' draggable="false" />
+        </>
     )
 }
 
