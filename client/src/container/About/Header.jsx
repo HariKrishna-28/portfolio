@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div
             id='Home'
-            className='flex flex-col md:flex-row lg:flex-row items-center justify-center lg:justify-evenly p-5'>
+            className='flex flex-col -mt-8 h-screen md:flex-row lg:flex-row items-center justify-center lg:justify-evenly p-5'>
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
@@ -58,19 +58,6 @@ const Header = () => {
                 transition={{ duration: 0.5 }}
             >
                 <div className='hidden md:flex md:flex-row lg:flex-row lg:flex md:flex-wrap w-28 items-center justify-evenly lg:flex-wrap gap-5'>
-                    {/* <img src={NodeJs} alt="" className='w-8' draggable="false" />
-                    <img src={Express} alt="" className='w-8' draggable="false" />
-                    <img src={Git} alt="" className='w-8' draggable="false" />
-                    <img src={JavaScript} alt="" className='w-8' draggable="false" />
-                    <img src={Typescript} alt="" className='w-8' draggable="false" />
-                    <img src={ReactJs} alt="" className='w-8' draggable="false" />
-                    <img src={Mongo} alt="" className='w-8' draggable="false" />
-                    <img src={Html} alt="" className='w-8' draggable="false" />
-                    <img src={Css} alt="" className='w-8' draggable="false" />
-                    <img src={Python} alt="" className='w-8' draggable="false" />
-                    <img src={BootStrap} alt="" className='w-8' draggable="false" />
-                    <img src={Tailwind} alt="" className='w-8' draggable="false" />
-                    <img src={Firebase} alt="" className='w-8' draggable="false" /> */}
                     <Ts />
                 </div>
             </motion.div>

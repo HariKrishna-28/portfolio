@@ -7,7 +7,7 @@ import Ts from './Ts'
 
 const About = () => {
     return (
-        <div className='flex flex-col gap-10 p-10' id='About'>
+        <div className='flex flex-col items-center justify-center h-screen gap-10 p-10' id='About'>
             {/* <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}> */}
@@ -22,7 +22,8 @@ const About = () => {
                 transition={{ duration: 0.5 }}>
                 <div className='flex justify-center text-gray-600'>
                     <div className='w-full md:w-3/4 lg:w-3/4 text-justify font-semibold text-2xl '>
-                        I am a self taught <span className='text-black'>full stack MERN developer</span> and <span className='text-black'>python programmer</span>. I seek challenging opportunities where I can fully use my skills to the success of the organisation.
+                        I am a self taught <span className='text-black'>full stack MERN developer</span> with a passion for creating beautiful and functional web applicartions
+                        . I seek challenging opportunities where I can fully use my skills to the success of the organisation.
                     </div>
                 </div>
             </motion.div>
