@@ -1,26 +1,118 @@
 import React from 'react'
-import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
+import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MySql, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
 import { Tooltip, Zoom } from '@mui/material';
+import { motion } from 'framer-motion'
 
 const Ts = () => {
 
     const tileStyling = "w-8 hover:w-14 hover:-m-3 cursor-pointer"
 
+    const techStack = [
+        {
+            name: "NodeJs",
+            address: NodeJs,
+        },
+        {
+            name: 'ExpressJs',
+            address: Express,
+        },
+        {
+            name: 'Git',
+            address: Git,
+        },
+        {
+            name: 'Javascript',
+            address: JavaScript
+        },
+        {
+            name: 'Typescript',
+            address: Typescript
+        },
+        {
+            name: 'ReactJs',
+            address: ReactJs
+        },
+        {
+            name: 'MongoDB',
+            address: Mongo,
+        },
+        {
+            name: 'HTML',
+            address: Html,
+        },
+        {
+            name: 'CSS',
+            address: Css,
+        },
+        {
+            name: 'Python',
+            address: Python,
+        },
+        {
+            name: 'Bootstrap',
+            address: BootStrap,
+        },
+        {
+            name: 'TailwindCSS',
+            address: Tailwind
+        },
+        {
+            name: 'Firebase',
+            address: Firebase
+        },
+        {
+            name: 'MySQL',
+            address: MySql
+        }
+    ]
+
     return (
         <>
-            <Tooltip
+            {
+                techStack.map(({ name, address }, index) => {
+                    return (
+                        <Tooltip
+                            placement={index % 2 === 0 ? "left" : "right"}
+                            TransitionComponent={Zoom}
+                            TransitionProps={{ timeout: 400 }}
+                            title={name}
+                        >
+                            <motion.div
+                                whileInView={{ opacity: 1 }}
+                                whileHover={{ scale: 1.5 }}
+                                transition={{ duration: 0.3, type: 'tween' }}
+                            >
+                                <img src={address} alt="" className='w-8' draggable="false" />
+                            </motion.div>
+                        </Tooltip>
+                    )
+                })
+            }
+            {/* <Tooltip
                 placement="left"
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 400 }}
                 title="NodeJs">
-                <img src={NodeJs} alt="" className={tileStyling} draggable="false" />
+                <motion.div
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5, type: 'tween' }}
+                >
+                    <img src={NodeJs} alt="" draggable="false" />
+                </motion.div>
             </Tooltip>
             <Tooltip
                 placement="right"
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 400 }}
                 title="ExpressJs">
-                <img src={Express} alt="" className={tileStyling} draggable="false" />
+                <motion.div
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5, type: 'tween' }}
+                >
+                    <img src={Express} alt="" draggable="false" />
+                </motion.div>
             </Tooltip>
             <Tooltip
                 placement="left"
@@ -100,7 +192,7 @@ const Ts = () => {
                 TransitionProps={{ timeout: 400 }}
                 title="Firebase">
                 <img src={Firebase} alt="" className={tileStyling} draggable="false" />
-            </Tooltip>
+            </Tooltip> */}
         </>
     )
 }

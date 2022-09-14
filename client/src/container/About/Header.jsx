@@ -57,7 +57,7 @@ const Header = () => {
                 whileInView={{ x: [+100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
             >
-                <div className='hidden md:flex md:flex-row lg:flex-row lg:flex md:flex-wrap w-28 items-center justify-evenly lg:flex-wrap gap-6'>
+                <div className='hidden md:flex md:flex-row lg:flex-row lg:flex md:flex-wrap w-28 items-center justify-evenly lg:flex-wrap gap-5'>
                     {/* <img src={NodeJs} alt="" className='w-8' draggable="false" />
                     <img src={Express} alt="" className='w-8' draggable="false" />
                     <img src={Git} alt="" className='w-8' draggable="false" />
