@@ -1,0 +1,16 @@
+export { default as Express } from "./icons/express.svg";
+export { default as Firebase } from "./icons/firebase.svg";
+export { default as Git } from "./icons/git.svg";
+export { default as JavaScript } from "./icons/js.svg";
+export { default as ReactJs } from "./icons/react.svg";
+export { default as Typescript } from "./icons/ts.svg";
+export { default as Mongo } from "./icons/mongodb.svg";
+// export { default as Post } from "./icons/postman.svg";
+export { default as Python } from "./icons/python.svg";
+export { default as MySql } from "./icons/mysql.svg";
+export { default as Html } from "./icons/html5.svg";
+export { default as Java } from "./icons/java.svg";
+export { default as NodeJs } from "./icons/nodejs.svg";
+export { default as Tailwind } from "./icons/tailwind.svg";
+export { default as BootStrap } from "./icons/bootstrap.svg";
+export { default as Css } from "./icons/css.svg";
