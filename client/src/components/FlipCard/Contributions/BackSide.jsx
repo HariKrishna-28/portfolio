@@ -18,16 +18,17 @@ const BackSide = ({ flipCard, github, description, site }) => {
                 </div>
 
                 <div className='flex flex-row items-center justify-around w-full'>
-                    <div><GitHub className='h-6' /></div>
-                    <div><OpenInNew className='h-6' /></div>
-                    <div><img src={NpmSquare} alt="" className='h-6' /></div>
+                    <a href={github} target="_blank" rel="noopener noreferrer"><GitHub className='h-6 cursor-pointer' /></a>
+                    <a href={site} target="_blank" rel="noopener noreferrer"><img src={NpmSquare} alt="" className='h-6 cursor-pointer' /></a>
                 </div>
-                <button
+                <div className='text-center cursor-pointer' onClick={flipCard}>
+                    <ArrowBack />
+                </div>
+                {/* <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     onClick={flipCard}
                 >
-                    <ArrowBack />
-                </button>
+                </button> */}
             </div>
         </motion.div>
     )

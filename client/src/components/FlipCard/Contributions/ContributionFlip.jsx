@@ -3,16 +3,16 @@ import BackSide from './BackSide'
 import FrontSide from './FrontSide'
 
 
-const ContributionFlip = () => {
+const ContributionFlip = ({ description, github, name, npm }) => {
     const [flipped, setFlipped] = useState(false)
+    console.log(description, github, name, npm)
 
-    const desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, suscipit alias excepturi molestiae corrupti maxime deserunt est nulla quod accusantium?"
     const flipCard = () => setFlipped(!flipped)
 
     return (
         <div>
 
-            {!flipped ? <FrontSide title="Load animations react" flipCard={flipCard} /> : <BackSide description={desc} flipCard={flipCard} />}
+            {!flipped ? <FrontSide title={name} flipCard={flipCard} /> : <BackSide description={description} flipCard={flipCard} github={github} site={npm} />}
         </div>
     )
 }
