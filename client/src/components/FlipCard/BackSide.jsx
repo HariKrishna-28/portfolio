@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 
 
-const BackSide = ({ flipCard }) => {
+const BackSide = ({ flipCard, github, description, site }) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}

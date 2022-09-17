@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 
-const FrontSide = ({ flipCard }) => {
+const FrontSide = ({ flipCard, url, title }) => {
     return (
         <motion.div
             // style={{ height: "100px", width: "100px" }}
