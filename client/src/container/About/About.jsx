@@ -48,7 +48,7 @@ const About = () => {
                 </div>
             </motion.div>
 
-            <FlipCard />
+            {/* <FlipCard /> */}
         </div>
 
     )

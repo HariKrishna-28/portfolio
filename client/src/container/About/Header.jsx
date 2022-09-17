@@ -4,7 +4,7 @@ import ProfilePic from '../../assets/profile.png'
 import WaveGif from '../../assets/icons/wave.gif'
 // import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
 import Ts from './Ts'
-
+import AppWrap from '../../components/wrapper/AppWrap'
 
 const Header = () => {
     return (
