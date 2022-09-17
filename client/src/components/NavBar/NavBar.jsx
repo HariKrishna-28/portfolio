@@ -29,7 +29,7 @@ const NavBar = () => {
 
     const handleCloseNavMenu = (section) => {
         setAnchorElNav(null);
-        document.getElementById(section).scrollIntoView()
+        document.getElementById(section).scrollIntoView({ behavior: "smooth" })
     };
 
     const handleCloseUserMenu = () => {
