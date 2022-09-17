@@ -14,3 +14,5 @@ export { default as NodeJs } from "./icons/nodejs.svg";
 export { default as Tailwind } from "./icons/tailwind.svg";
 export { default as BootStrap } from "./icons/bootstrap.svg";
 export { default as Css } from "./icons/css.svg";
+export { default as Npm } from "./icons/npm.svg";
+export { default as NpmSquare } from "./icons/npm-square.svg";

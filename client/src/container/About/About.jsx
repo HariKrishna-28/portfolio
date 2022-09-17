@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 // import { Express, Git, JavaScript, Mongo, NodeJs, ReactJs, Typescript } from '../../assets'
 import Ts from './Ts'
-import FlipCard from '../../components/FlipCard/FlipCard'
 
 
 const About = () => {

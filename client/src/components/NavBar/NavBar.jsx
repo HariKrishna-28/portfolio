@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
 
 const sections = ['Home', 'About', 'Contributions', 'Projects'];
 const social = ['Github', 'Hackerrank', 'Instagram', 'Linkedin'];
@@ -86,7 +86,7 @@ const NavBar = () => {
                                 horizontal: 'left',
                             }}
                             open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
+                            onClick={() => handleCloseNavMenu}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
                             }}
