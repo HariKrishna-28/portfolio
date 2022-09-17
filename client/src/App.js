@@ -19,9 +19,9 @@ function App() {
         <Header />
         <About />
         <Contributions />
-        <Footer />
-        <Skills />
         <Projects />
+        {/* <Footer />
+        <Skills /> */}
         {/* <NavDots active={true} />
         <SocialMedia /> */}
       </div>

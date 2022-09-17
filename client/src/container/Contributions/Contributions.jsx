@@ -8,7 +8,7 @@ const vals = [1, 2, 3, 4, 5]
 const Contributions = () => {
     return (
         <div id='Contributions' className='flex flel-col items-center justify-center h-screen'>
-            <div>
+            <div className='flex flex-col gap-10 '>
                 <div className='text-center font-bold text-4xl'>
                     CONTRIBUTIONS
                 </div>

@@ -27,8 +27,9 @@ const NavBar = () => {
         setAnchorElUser(event.currentTarget);
     };
 
-    const handleCloseNavMenu = () => {
+    const handleCloseNavMenu = (section) => {
         setAnchorElNav(null);
+        document.getElementById(section).scrollIntoView()
     };
 
     const handleCloseUserMenu = () => {
@@ -91,10 +92,10 @@ const NavBar = () => {
                             }}
                         >
                             {sections.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <a href={`#${page}`}>
+                                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
+                                    <div>
                                         <Typography textAlign="center">{page}</Typography>
-                                    </a>
+                                    </div>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -123,16 +124,16 @@ const NavBar = () => {
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <div className='flex w-full items-center justify-end gap-3'>
                             {sections.map((page) => (
-                                <a href={`#${page}`}>
+                                <div>
                                     <Button
                                         key={page}
-                                        onClick={handleCloseNavMenu}
+                                        onClick={() => handleCloseNavMenu(page)}
 
                                         sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Proxima Nova, system-ui, sans-serif', }}
                                     >
                                         {page}
                                     </Button>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </Box>
