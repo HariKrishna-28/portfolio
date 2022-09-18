@@ -14,7 +14,7 @@ import {
 function App() {
   return (
     <div>
-      <div className="flex flex-col select-none">
+      <div className="flex bg-backgroundColor text-textColor flex-col select-none">
         <NavBar />
         <Header />
         <About />

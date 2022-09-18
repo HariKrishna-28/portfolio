@@ -8,7 +8,7 @@ const NavDots = ({ active }) => {
     return (
         <div className='gap-2 w-10 items-center justify-center'>
             {sections.map((element, index) => {
-                const bg = active === element ? "text-black" : "text-gray-500"
+                const bg = active === element ? "text-black" : "text-secondaryText"
                 return (
                     <a
                         key={index}

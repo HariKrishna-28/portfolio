@@ -19,9 +19,9 @@ const About = () => {
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}>
-                <div className='flex justify-center text-gray-600'>
+                <div className='flex justify-center text-secondaryText'>
                     <div className='w-full md:w-3/4 lg:w-3/4 text-justify font-semibold text-2xl '>
-                        I am a self taught <span className='text-black'>full stack MERN developer</span> with a passion for creating beautiful and functional web applicartions
+                        I am a self taught <span className='font-extrabold textGradient'>full stack MERN developer</span> with a passion for creating beautiful and functional web applicartions
                         . I seek challenging opportunities where I can fully use my skills to the success of the organisation.
                     </div>
                 </div>

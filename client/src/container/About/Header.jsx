@@ -25,12 +25,12 @@ const Header = () => {
                             </span> */}
                             <div className='flex flex-col'>
                                 <div>
-                                    <p className='text-gray-500 text-3xl text-center lg:text-start md:text-start'>Hello, I am</p>
-                                    <p className='font-bold text-5xl'>Harikrishna</p>
+                                    <p className='text-secondaryText text-3xl text-center lg:text-start md:text-start'>Hello, I am</p>
+                                    <p className='font-bold text-5xl textGradient'>Harikrishna</p>
                                 </div>
                                 <div className='flex gap-2 items-center justify-center'>
                                     <p>Web Developer</p>
-                                    <p className='text-gray-500'>|</p>
+                                    <p className='text-secondaryText'>|</p>
                                     <p>Python programmer</p>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const Header = () => {
                 whileInView={{ y: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
             >
-                <div className='bg-gradient-to-b to-gray-500 p-3 shadow-xl rounded-full overflow-hidden'>
+                <div className='bg-gradient-to-t from-backgroundColor to-secondaryBackground p-3 shadow-xl rounded-full overflow-hidden'>
                     <motion.div
                         whileInView={{ y: [+100, 0], opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}>

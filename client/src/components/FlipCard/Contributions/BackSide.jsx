@@ -11,7 +11,7 @@ const BackSide = ({ flipCard, github, description, site }) => {
             animate={{ opacity: 1, rotateX: 360 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className='bg-black text-white h-64 w-64 p-3 rounded-lg shadow-lg'>
+            className='bg-secondaryBackground text-textColor h-64 w-64 p-3 rounded-lg shadow-lg'>
             <div className='flex flex-col items-center justify-evenly h-full'>
                 <div className='p-2 font-sm'>
                     {description}

@@ -9,8 +9,9 @@ const FrontSide = ({ flipCard, title }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, rotateX: 360, }}
             exit={{ opacity: 0 }}
+
             transition={{ duration: 1 }}
-            className='bg-black text-white h-64 w-64 p-3 flex-flex-col  rounded-lg shadow-lg'>
+            className='bg-secondaryBackground text-textColor  h-64 w-64 p-3 flex-flex-col  rounded-lg shadow-lg'>
             <div className='flex flex-col h-full items-center justify-evenly'>
                 <div className='p-3 flex items-center justify-center'>
                     <img src={Npm} alt="" className='h-5' />
