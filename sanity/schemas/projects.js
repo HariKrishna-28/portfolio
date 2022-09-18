@@ -27,7 +27,9 @@ export default {
       name: "walkthrough",
       title: "Walkthrough",
       type: "string",
-      initialValue: "",
+      // options: {
+      //   accept: "video/mp4",
+      // },
     },
     {
       name: "tech_stack",
