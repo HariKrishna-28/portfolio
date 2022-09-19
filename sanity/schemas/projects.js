@@ -14,6 +14,11 @@ export default {
       type: "string",
     },
     {
+      name: "tagline",
+      title: "Tagline",
+      type: "string",
+    },
+    {
       name: "github",
       title: "Github",
       type: "string",

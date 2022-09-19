@@ -1,9 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import ReactPlayer from 'react-player/lazy'
+import { Info } from '@mui/icons-material';
 // import { getFileAsset } from '@sanity/asset-utils';
 
-const FrontProject = ({ flipCard, title, url, desc }) => {
+const FrontProject = ({ flipCard, title, url, desc, tag }) => {
     return (
         <motion.div
             // style={{ height: "100px", width: "100px" }}
@@ -22,8 +23,8 @@ const FrontProject = ({ flipCard, title, url, desc }) => {
                     <video src={url} autoPlay loop />
                 </div>
 
-                <div className='text-secondaryText text-justify'>
-                    social media application
+                <div className='text-secondaryText text-justify font-semibold'>
+                    {tag}
                 </div>
 
                 <div className='text-center '>

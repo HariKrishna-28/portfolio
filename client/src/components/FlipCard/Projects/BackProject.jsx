@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowBack, GitHub, OpenInNew } from '@mui/icons-material';
 import { NpmSquare } from '../../../assets';
 import TechStack from '../../../constants/TechStack';
+import { Tooltip, Zoom } from '@mui/material';
 
 
 const BackProject = ({ flipCard, github, description, site, ts }) => {
@@ -17,12 +18,28 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
                 <div className='p-2 font-sm text-justify text-secondaryText'>
                     {description}
                 </div>
+                <div className='w-full'>
+                    <div className='text-center font-semibold'> Links</div>
+                    <div className='flex flex-row items-center justify-center gap-3'>
+                        <a href={github} target="_blank" rel="noopener noreferrer">
+                            <Tooltip
+                                placement="bottom"
+                                TransitionComponent={Zoom}
+                                TransitionProps={{ timeout: 400 }}
+                                title="View Repository">
+                                <GitHub className='h-6 cursor-pointer' />
+                            </Tooltip>
+                        </a>
+                        <a href={site} target="_blank" rel="noopener noreferrer">
+                            <Tooltip
+                                placement="bottom"
+                                TransitionComponent={Zoom}
+                                TransitionProps={{ timeout: 400 }}
+                                title="Launch site">
+                                <OpenInNew className='h-6 cursor-pointer' />
+                            </Tooltip>
 
-                <div>
-                    <div className='text-center'> Links</div>
-                    <div className='flex flex-row items-center justify-evenly w-full'>
-                        <a href={github} target="_blank" rel="noopener noreferrer"><GitHub className='h-6 cursor-pointer' /></a>
-                        <a href={site} target="_blank" rel="noopener noreferrer"><OpenInNew className='h-6 cursor-pointer' /></a>
+                        </a>
                         {/* <a href={site} target="_blank" rel="noopener noreferrer"><img src={NpmSquare} alt="" className='h-6 cursor-pointer' /></a> */}
                     </div>
                 </div>
@@ -42,9 +59,15 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
                     }
                 </div>
 
-                <div className='text-center cursor-pointer' onClick={flipCard}>
-                    <ArrowBack />
-                </div>
+                <Tooltip
+                    placement="bottom"
+                    TransitionComponent={Zoom}
+                    TransitionProps={{ timeout: 400 }}
+                    title="back">
+                    <div className='text-center cursor-pointer' onClick={flipCard}>
+                        <ArrowBack />
+                    </div>
+                </Tooltip>
                 {/* <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     onClick={flipCard}
