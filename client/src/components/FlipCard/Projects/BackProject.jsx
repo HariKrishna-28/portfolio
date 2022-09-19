@@ -2,9 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowBack, GitHub, OpenInNew } from '@mui/icons-material';
 import { NpmSquare } from '../../../assets';
+import TechStack from '../../../constants/TechStack';
 
 
-const BackProject = ({ flipCard, github, description, site }) => {
+const BackProject = ({ flipCard, github, description, site, ts }) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -17,10 +18,28 @@ const BackProject = ({ flipCard, github, description, site }) => {
                     {description}
                 </div>
 
-                <div className='flex flex-row items-center justify-evenly w-full'>
-                    <a href={github} target="_blank" rel="noopener noreferrer"><GitHub className='h-6 cursor-pointer' /></a>
-                    <a href={site} target="_blank" rel="noopener noreferrer"><img src={NpmSquare} alt="" className='h-6 cursor-pointer' /></a>
+                <div>
+                    <div className='text-center'> Links</div>
+                    <div className='flex flex-row items-center justify-evenly w-full'>
+                        <a href={github} target="_blank" rel="noopener noreferrer"><GitHub className='h-6 cursor-pointer' /></a>
+                        <a href={site} target="_blank" rel="noopener noreferrer"><OpenInNew className='h-6 cursor-pointer' /></a>
+                        {/* <a href={site} target="_blank" rel="noopener noreferrer"><img src={NpmSquare} alt="" className='h-6 cursor-pointer' /></a> */}
+                    </div>
                 </div>
+
+                <div className='text-center'> Tech stack</div>
+                <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
+                    {
+                        ts.map((element, index) => {
+                            return (
+                                <>
+                                    <TechStack name={element} />
+                                </>
+                            )
+                        })
+                    }
+                </div>
+
                 <div className='text-center cursor-pointer' onClick={flipCard}>
                     <ArrowBack />
                 </div>

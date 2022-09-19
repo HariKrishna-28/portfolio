@@ -9,7 +9,7 @@ const ProjectFlip = ({ data }) => {
     const flipCard = () => setFlipped(!flipped)
     return (
         <div className='text-black'>
-            {!flipped ? <FrontProject title={data.name} desc={data.description} url={data.walkthrough} flipCard={flipCard} /> : <BackProject description={data.description} github={data.github} site={data.site} flipCard={flipCard} />}
+            {!flipped ? <FrontProject title={data.name} desc={data.description} url={data.walkthrough} flipCard={flipCard} /> : <BackProject description={data.description} ts={data.tech_stack} github={data.github} site={data.site} flipCard={flipCard} />}
         </div>
     )
 }

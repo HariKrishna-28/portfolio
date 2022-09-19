@@ -17,7 +17,6 @@ const Contributions = () => {
             .catch((error) => console.log(error))
     }, [])
 
-    console.log(cont)
     return (
         <div
             id='Contributions'

@@ -16,3 +16,5 @@ export { default as BootStrap } from "./icons/bootstrap.svg";
 export { default as Css } from "./icons/css.svg";
 export { default as Npm } from "./icons/npm.svg";
 export { default as NpmSquare } from "./icons/npm-square.svg";
+export { default as Axios } from "./icons/axios.svg";
+export { default as MUI } from "./icons/MUI.svg";

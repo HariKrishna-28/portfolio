@@ -10,7 +10,7 @@ const About = () => {
             {/* <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}> */}
-            <div className='text-center font-bold text-4xl'>
+            <div className='text-center font-bold text-4xl textGradient'>
                 About
             </div>
             {/* </motion.div> */}

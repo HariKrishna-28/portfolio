@@ -3,13 +3,9 @@ import { motion } from 'framer-motion'
 import { ProjectFlip } from '../../components'
 import { client } from '../../client'
 
-const vals = [1, 2, 3, 4, 5]
-
 
 const Projects = () => {
     const [res, setRes] = useState([])
-
-
 
     useEffect(() => {
         const query = '*[_type == "projects"]'
@@ -17,6 +13,25 @@ const Projects = () => {
             .then((res) => setRes(res))
             .catch((error) => console.log(error))
     }, [])
+
+    // setRes({
+    //     "_createdAt": "2022-09-18T14:57:24Z",
+    //     "_id": "707e8c73-987c-4615-9a67-c4b5c2f177c0",
+    //     "_rev": "DDZCQSKbXmcHsIoEz5iiAZ",
+    //     "_type": "projects",
+    //     "description": "Connect with friends around the world using OctoVerse. Share your thoughts as a post or a message and follow your friends to see what they are up to.",
+    //     "github": "https://github.com/HariKrishna-28/octoverse",
+    //     "name": "Octoverse",
+    //     "site": "https://octo-verse.vercel.app/",
+    //     "tech_stack": [
+    //         "ReactJs",
+    //         "ReactJs",
+    //         "ExpressJs",
+    //         "MongoDb"
+    //     ],
+    //     "walkthrough": "https://firebasestorage.googleapis.com/v0/b/chat28-babc1.appspot.com/o/covid19.mp4?alt=media&token=58a8b28d-8563-4dce-b024-f0d57219d351",
+    //     "_updatedAt": "2022-09-19T06:12:23.256Z"
+    // })
 
 
     return (
@@ -37,6 +52,7 @@ const Projects = () => {
                             return (
                                 <>
                                     <ProjectFlip
+                                        key={index}
                                         data={element}
                                     />
                                 </>
@@ -54,6 +70,7 @@ const Projects = () => {
                                 <>
                                     <ProjectFlip
                                         data={element}
+                                        key={index}
                                     />
                                 </>
                             )
