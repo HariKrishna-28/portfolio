@@ -22,9 +22,9 @@ const FrontProject = ({ flipCard, title, url, desc }) => {
                     <video src={url} autoPlay loop />
                 </div>
 
-                {/* <div className='text-secondaryText text-justify'>
-                    {desc}
-                </div> */}
+                <div className='text-secondaryText text-justify'>
+                    social media application
+                </div>
 
                 <div className='text-center '>
                     <button

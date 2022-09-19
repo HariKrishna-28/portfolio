@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 // import StackExport from './StackExport'
 import { Tooltip, Zoom } from '@mui/material'
-import { Axios, BootStrap, Css, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, Tailwind, Typescript } from "../assets";
+import { Axios, BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, Tailwind, Typescript } from "../assets";
 
 
 const stackExport = [
@@ -13,7 +13,7 @@ const stackExport = [
     },
     {
         name: 'ExpressJs',
-        address: NodeJs,
+        address: Express,
     },
     {
         name: 'Git',
@@ -70,7 +70,8 @@ const stackExport = [
     {
         name: 'Axios',
         address: Axios
-    }
+    },
+
 
 ]
 

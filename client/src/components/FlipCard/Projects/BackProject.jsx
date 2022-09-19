@@ -33,7 +33,9 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
                         ts.map((element, index) => {
                             return (
                                 <>
-                                    <TechStack name={element} />
+                                    <TechStack
+                                        key={index}
+                                        name={element} />
                                 </>
                             )
                         })

@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div
             id='Home'
-            className='flex flex-col -mt-8 h-screen md:flex-row lg:flex-row items-center justify-center lg:justify-evenly p-5'>
+            className='flex flex-col -mt-5 h-screen md:flex-row lg:flex-row items-center justify-center lg:justify-evenly p-5'>
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}

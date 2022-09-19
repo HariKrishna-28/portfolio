@@ -39,7 +39,7 @@ const Projects = () => {
             id='Projects'
             className='flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
             <div className='flex flex-col gap-10 '>
-                <div className='text-center font-bold text-4xl'>
+                <div className='text-center font-bold text-4xl textGradient'>
                     Projects
                 </div>
 
