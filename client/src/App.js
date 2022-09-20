@@ -14,8 +14,10 @@ import {
 function App() {
   return (
     <div>
-      <div className="flex bg-backgroundColor text-textColor flex-col select-none">
-        <NavBar />
+      <div className="flex overflow-hidden bg-backgroundColor gap-5 text-textColor flex-col select-none">
+        <div className="w-full fixed z-50">
+          <NavBar />
+        </div>
         <Header />
         <About />
         <Contributions />

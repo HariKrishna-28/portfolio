@@ -12,15 +12,15 @@ const FrontProject = ({ flipCard, title, url, desc, tag }) => {
             animate={{ opacity: 1, rotateX: 360, }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className='bg-secondaryBackground text-textColor h-72 w-72 lg:h[400px] lg:w-[400px] md:h-[400px] md:w-[400px] flex-flex-col rounded-lg shadow-lg'>
+            className='bg-secondaryBackground  text-textColor h-72 w-72 lg:h[400px] lg:w-[400px] md:h-[400px] md:w-[400px] flex-flex-col rounded-lg shadow-lg'>
             <div className='flex flex-col h-full items-center justify-evenly'>
 
                 <div className='font-bold text-2xl text-white'>
                     {title}
                 </div>
 
-                <div className='p-3 rounded-lg'>
-                    <video src={url} autoPlay loop />
+                <div className='p-5 '>
+                    <video src={url} className="rounded" autoPlay loop />
                 </div>
 
                 <div className='text-secondaryText text-justify font-semibold'>

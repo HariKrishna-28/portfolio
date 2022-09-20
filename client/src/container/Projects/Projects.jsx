@@ -38,12 +38,12 @@ const Projects = () => {
         <div
             id='Projects'
             className='flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
-            <div className='flex flex-col gap-10 '>
-                <div className='text-center font-bold text-4xl textGradient'>
+            <div className='flex flex-col'>
+                <div className='text-center mt-16 font-bold text-4xl textGradient'>
                     Projects
                 </div>
 
-                <div className='hidden md:flex lg:flex container scrollbar-hide overflow-x-scroll p-10 '>
+                <div className='hidden md:flex lg:flex container scrollbar-hide overflow-x-scroll p-8 '>
                     <motion.div
                         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}

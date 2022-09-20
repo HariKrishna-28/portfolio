@@ -40,7 +40,7 @@ const NavBar = () => {
         <AppBar position="sticky" sx={{
             // background: "#1A1A1A",
             background: "#0C1116",
-            // marginBottom: "10px"
+            // marginBottom: "100px"
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>

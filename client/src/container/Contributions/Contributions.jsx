@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { client } from '../../client'
 import { ContributionFlip } from '../../components'
-
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 const vals = [1, 2, 3, 4, 5]
 
 
