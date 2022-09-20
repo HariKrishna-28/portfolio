@@ -14,7 +14,26 @@ import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 
 const sections = ['Home', 'About', 'Contributions', 'Projects'];
-const social = ['Github', 'Hackerrank', 'Instagram', 'Linkedin'];
+const social = [
+    {
+        name: 'Github',
+        site: 'https://github.com/HariKrishna-28'
+
+    },
+    {
+        name: 'Hackerrank',
+        site: 'https://www.hackerrank.com/Harikrishna28'
+    },
+    {
+        name: 'Linkedin',
+        site: 'https://www.linkedin.com/in/harikrishna-c/'
+    },
+    {
+        site: 'Instagram',
+        site: 'https://www.instagram.com/___h28__'
+    }
+]
+// const social = ['Github', 'Hackerrank', 'Instagram', 'Linkedin'];
 
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -139,7 +158,7 @@ const NavBar = () => {
                         </div>
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    {/* <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open social">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -161,13 +180,15 @@ const NavBar = () => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {social.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center" sx={{ fontFamily: 'Proxima Nova, system-ui, sans-serif', }}>{setting}</Typography>
+                            {social.map((setting, index) => (
+                                <MenuItem key={index} onClick={handleCloseUserMenu}>
+                                    <a href={setting.site} target="_blank" rel="noopener noreferrer">
+                                        <Typography textAlign="center" sx={{ fontFamily: 'Proxima Nova, system-ui, sans-serif', }}>{setting.name}</Typography>
+                                    </a>
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>
