@@ -11,10 +11,29 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
 
 const sections = ['Home', 'About', 'Contributions', 'Projects'];
-const social = ['Github', 'Hackerrank', 'Instagram', 'Linkedin'];
+const social = [
+    {
+        name: 'Github',
+        site: 'https://github.com/HariKrishna-28'
+
+    },
+    {
+        name: 'Hackerrank',
+        site: 'https://www.hackerrank.com/Harikrishna28'
+    },
+    {
+        name: 'Linkedin',
+        site: 'https://www.linkedin.com/in/harikrishna-c/'
+    },
+    {
+        site: 'Instagram',
+        site: 'https://www.instagram.com/___h28__'
+    }
+]
+// const social = ['Github', 'Hackerrank', 'Instagram', 'Linkedin'];
 
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,8 +46,9 @@ const NavBar = () => {
         setAnchorElUser(event.currentTarget);
     };
 
-    const handleCloseNavMenu = () => {
+    const handleCloseNavMenu = (section) => {
         setAnchorElNav(null);
+        document.getElementById(section).scrollIntoView({ behavior: "smooth" })
     };
 
     const handleCloseUserMenu = () => {
@@ -37,8 +57,9 @@ const NavBar = () => {
 
     return (
         <AppBar position="sticky" sx={{
-            background: "#1A1A1A",
-            // background: "#161B22",
+            // background: "#1A1A1A",
+            background: "#0C1116",
+            // marginBottom: "100px"
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -85,16 +106,16 @@ const NavBar = () => {
                                 horizontal: 'left',
                             }}
                             open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
+                            onClick={() => handleCloseNavMenu}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
                             {sections.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <a href={`#${page}`}>
+                                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
+                                    <div>
                                         <Typography textAlign="center">{page}</Typography>
-                                    </a>
+                                    </div>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -123,21 +144,21 @@ const NavBar = () => {
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <div className='flex w-full items-center justify-end gap-3'>
                             {sections.map((page) => (
-                                <a href={`#${page}`}>
+                                <div>
                                     <Button
                                         key={page}
-                                        onClick={handleCloseNavMenu}
+                                        onClick={() => handleCloseNavMenu(page)}
 
                                         sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Proxima Nova, system-ui, sans-serif', }}
                                     >
                                         {page}
                                     </Button>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    {/* <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open social">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -159,13 +180,15 @@ const NavBar = () => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {social.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center" sx={{ fontFamily: 'Proxima Nova, system-ui, sans-serif', }}>{setting}</Typography>
+                            {social.map((setting, index) => (
+                                <MenuItem key={index} onClick={handleCloseUserMenu}>
+                                    <a href={setting.site} target="_blank" rel="noopener noreferrer">
+                                        <Typography textAlign="center" sx={{ fontFamily: 'Proxima Nova, system-ui, sans-serif', }}>{setting.name}</Typography>
+                                    </a>
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>

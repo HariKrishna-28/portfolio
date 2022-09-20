@@ -1,5 +1,7 @@
 // import Skills from "../../sanity/schemas/skills";
 import { NavBar } from "./components";
+import NavDots from "./components/NavDots/NavDots";
+import SocialMedia from "./components/Social/SocialMedia";
 import {
   About,
   Contributions,
@@ -12,14 +14,18 @@ import {
 function App() {
   return (
     <div>
-      <div className="flex flex-col gap-5">
-        <NavBar />
+      <div className="flex overflow-hidden bg-backgroundColor gap-5 text-textColor flex-col select-none">
+        <div className="w-full fixed z-50">
+          <NavBar />
+        </div>
         <Header />
         <About />
-        <Footer />
-        <Skills />
         <Contributions />
         <Projects />
+        {/* <Footer />
+        <Skills /> */}
+        {/* <NavDots active={true} />
+        <SocialMedia /> */}
       </div>
     </div>
   );

@@ -14,6 +14,11 @@ export default {
       type: "string",
     },
     {
+      name: "tagline",
+      title: "Tagline",
+      type: "string",
+    },
+    {
       name: "github",
       title: "Github",
       type: "string",
@@ -27,7 +32,9 @@ export default {
       name: "walkthrough",
       title: "Walkthrough",
       type: "string",
-      initialValue: "",
+      // options: {
+      //   accept: "video/mp4",
+      // },
     },
     {
       name: "tech_stack",

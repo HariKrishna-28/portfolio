@@ -4,13 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        backgroundColor: "#1A1A1A",
-        textColor: "#FFFFFF",
-        secondaryTextColor: "rgb(140,93,247)",
-        secondaryHeading: "#8F14FF",
-        aboutTile: "#8859F5",
+        backgroundColor: "#0C1116",
+        secondaryBackground: "#171A22",
+        secondaryText: "#A3B2AD",
+        textColor: "#FEFEFF",
+        fancyTestStart: "#4CA4FE",
+        fanctTextEnd: "#B077F8",
+        borderColor: "#40A1FE",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
