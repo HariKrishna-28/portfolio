@@ -17,7 +17,8 @@ const About = () => {
 
 
             <motion.div
-                whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
+                // x: [-100, 0],
                 transition={{ duration: 0.5 }}>
                 <div className='flex justify-center text-secondaryText'>
                     <div className='w-full md:w-3/4 lg:w-3/4 text-justify font-semibold text-2xl '>

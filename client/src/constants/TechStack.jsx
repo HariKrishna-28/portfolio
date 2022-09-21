@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 // import StackExport from './StackExport'
 import { Tooltip, Zoom } from '@mui/material'
-import { Axios, BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, Tailwind, Typescript } from "../assets";
+import { Axios, BootStrap, Css, Disease, Express, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, ReactRouter, Redux, Tailwind, Typescript } from "../assets";
 
 
 const stackExport = [
@@ -87,6 +87,21 @@ const stackExport = [
         address: Axios,
         documentation: "https://axios-http.com/docs/intro"
     },
+    {
+        name: 'React Router',
+        address: ReactRouter,
+        documentation: "https://axios-http.com/docs/intro"
+    },
+    {
+        name: 'Disease.sh API',
+        address: Disease,
+        documentation: "https://disease.sh/"
+    },
+    {
+        name: 'Redux',
+        address: Redux,
+        documentation: "https://reactrouter.com/en/main"
+    },
 
 
 ]
@@ -96,7 +111,7 @@ const TechStack = ({ name }) => {
     // const name
     return (
         <>
-            <a href={data.documentation} target="_blank" rel="noopener noreferrer">
+            <a href={data?.documentation} target="_blank" rel="noopener noreferrer">
                 {/* <h1>hi frans</h1> */}
                 <Tooltip
                     placement="bottom"

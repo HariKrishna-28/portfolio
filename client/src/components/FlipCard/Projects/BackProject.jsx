@@ -15,9 +15,10 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
             transition={{ duration: 1 }}
             className='bg-secondaryBackground text-textColor p-2 h-72 w-72 lg:h[400px] lg:w-[400px] md:h-[400px] md:w-[400px] rounded-lg shadow-lg'>
             <div className='flex flex-col items-center justify-evenly h-full'>
-
-                <div className='p-2 font-sm text-justify text-secondaryText'>
-                    {description}
+                <div className='h-1/3 overflow-auto scrollbar-hide'>
+                    <div className='p-2 font-sm text-justify text-secondaryText'>
+                        {description}
+                    </div>
                 </div>
 
                 <div className='w-full -mt-4'>

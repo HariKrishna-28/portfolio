@@ -45,7 +45,7 @@ const Projects = () => {
 
                 <div className='hidden md:flex lg:flex container scrollbar-hide overflow-x-scroll p-8 '>
                     <motion.div
-                        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                        whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
                         className='flex flex-row items-center gap-3' >
                         {res.map((element, index) => {
