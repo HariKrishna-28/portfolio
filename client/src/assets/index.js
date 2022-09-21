@@ -18,3 +18,6 @@ export { default as Npm } from "./icons/npm.svg";
 export { default as NpmSquare } from "./icons/npm-square.svg";
 export { default as Axios } from "./icons/axios.svg";
 export { default as MUI } from "./icons/MUI.svg";
+export { default as Disease } from "./icons/disease.png";
+export { default as Redux } from "./icons/redux.svg";
+export { default as ReactRouter } from "./icons/react-router.svg";

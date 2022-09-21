@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 // import StackExport from './StackExport'
 import { Tooltip, Zoom } from '@mui/material'
-import { Axios, BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, Tailwind, Typescript } from "../assets";
+import { Axios, BootStrap, Css, Disease, Express, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, ReactRouter, Redux, Tailwind, Typescript } from "../assets";
 
 
 const stackExport = [
@@ -86,6 +86,21 @@ const stackExport = [
         name: 'Axios',
         address: Axios,
         documentation: "https://axios-http.com/docs/intro"
+    },
+    {
+        name: 'Disease.sh API',
+        address: Disease,
+        documentation: "https://disease.sh/"
+    },
+    {
+        name: 'Redux',
+        address: Redux,
+        documentation: "https://react-redux.js.org/"
+    },
+    {
+        name: 'React Router',
+        address: ReactRouter,
+        documentation: "https://reactrouter.com/en/main"
     },
 
 
