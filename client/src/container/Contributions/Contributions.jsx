@@ -10,12 +10,12 @@ const vals = [1, 2, 3, 4, 5]
 const Contributions = () => {
     const [cont, setCont] = useState([])
 
-    useEffect(() => {
-        const query = '*[_type == "open_source"]'
-        client.fetch(query)
-            .then((res) => setCont(res))
-            .catch((error) => console.log(error))
-    }, [])
+    // useEffect(() => {
+    //     const query = '*[_type == "open_source"]'
+    //     client.fetch(query)
+    //         .then((res) => setCont(res))
+    //         .catch((error) => console.log(error))
+    // }, [])
 
     return (
         <div

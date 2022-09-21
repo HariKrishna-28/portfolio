@@ -22,8 +22,8 @@ function App() {
         <About />
         <Contributions />
         <Projects />
-        {/* <Footer />
-        <Skills /> */}
+        <Footer />
+        {/*        <Skills /> */}
         {/* <NavDots active={true} />
         <SocialMedia /> */}
       </div>

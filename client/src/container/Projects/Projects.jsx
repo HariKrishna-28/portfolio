@@ -7,12 +7,12 @@ import { client } from '../../client'
 const Projects = () => {
     const [res, setRes] = useState([])
 
-    useEffect(() => {
-        const query = '*[_type == "projects"]'
-        client.fetch(query)
-            .then((res) => setRes(res))
-            .catch((error) => console.log(error))
-    }, [])
+    // useEffect(() => {
+    //     const query = '*[_type == "projects"]'
+    //     client.fetch(query)
+    //         .then((res) => setRes(res))
+    //         .catch((error) => console.log(error))
+    // }, [])
 
     // setRes({
     //     "_createdAt": "2022-09-18T14:57:24Z",
@@ -39,7 +39,7 @@ const Projects = () => {
             id='Projects'
             className='flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
             <div className='flex flex-col'>
-                <div className='text-center mt-16 font-bold text-4xl textGradient'>
+                <div className='text-center mt-16 p-2 font-bold text-4xl textGradient'>
                     Projects
                 </div>
 
