@@ -10,12 +10,12 @@ const vals = [1, 2, 3, 4, 5]
 const Contributions = () => {
     const [cont, setCont] = useState([])
 
-    // useEffect(() => {
-    //     const query = '*[_type == "open_source"]'
-    //     client.fetch(query)
-    //         .then((res) => setCont(res))
-    //         .catch((error) => console.log(error))
-    // }, [])
+    useEffect(() => {
+        const query = '*[_type == "open_source"]'
+        client.fetch(query)
+            .then((res) => setCont(res))
+            .catch((error) => console.log(error))
+    }, [])
 
     return (
         <div
@@ -28,7 +28,7 @@ const Contributions = () => {
 
                 <div className='hidden md:flex lg:flex containe p-10 '>
                     <motion.div
-                        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                        whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
                         className='flex flex-row items-center overflow-x-scroll scrollbar-hide gap-3' >
                         {cont.map((element, index) => {

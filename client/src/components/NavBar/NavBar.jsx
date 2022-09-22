@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 
-const sections = ['Home', 'About', 'Contributions', 'Projects'];
+const sections = ['Home', 'About', 'Contributions', 'Projects', 'Contact'];
 const social = [
     {
         name: 'Github',
@@ -63,6 +63,7 @@ const NavBar = () => {
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+                    {/* small disp */}
                     {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                     <Typography
                         variant="h6"
@@ -74,7 +75,7 @@ const NavBar = () => {
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'Proxima Nova, system-ui, sans-serif',
                             fontWeight: 700,
-                            // letterSpacing: '.3rem',
+                            // letterSpacing: '.5rem',
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
@@ -113,9 +114,11 @@ const NavBar = () => {
                         >
                             {sections.map((page) => (
                                 <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
-                                    <div>
-                                        <Typography textAlign="center">{page}</Typography>
-                                    </div>
+                                    <a href={`#${page}`}>
+                                        <div>
+                                            <Typography textAlign="center">{page}</Typography>
+                                        </div>
+                                    </a>
                                 </MenuItem>
                             ))}
                         </Menu>

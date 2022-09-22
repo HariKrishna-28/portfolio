@@ -7,12 +7,12 @@ import { client } from '../../client'
 const Projects = () => {
     const [res, setRes] = useState([])
 
-    // useEffect(() => {
-    //     const query = '*[_type == "projects"]'
-    //     client.fetch(query)
-    //         .then((res) => setRes(res))
-    //         .catch((error) => console.log(error))
-    // }, [])
+    useEffect(() => {
+        const query = '*[_type == "projects"]'
+        client.fetch(query)
+            .then((res) => setRes(res))
+            .catch((error) => console.log(error))
+    }, [])
 
     // setRes({
     //     "_createdAt": "2022-09-18T14:57:24Z",
