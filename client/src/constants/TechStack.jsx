@@ -3,7 +3,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 // import StackExport from './StackExport'
 import { Tooltip, Zoom } from '@mui/material'
-import { Axios, BootStrap, Css, Disease, Express, Firebase, Git, Html, JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, ReactRouter, Redux, Tailwind, Typescript } from "../assets";
+import {
+    Auth0,
+    Axios, BootStrap, Css, Disease, Express, Firebase, Git, Html,
+    JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, ReactRouter,
+    Redux, Tailwind, Typescript
+} from "../assets";
 
 
 const stackExport = [
@@ -101,6 +106,11 @@ const stackExport = [
         name: 'Redux',
         address: Redux,
         documentation: "https://reactrouter.com/en/main"
+    },
+    {
+        name: 'Auth0',
+        address: Auth0,
+        documentation: "https://auth0.com/docs/"
     },
 
 
