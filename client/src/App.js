@@ -1,5 +1,5 @@
 // import Skills from "../../sanity/schemas/skills";
-import { NavBar } from "./components";
+import { Contact, NavBar } from "./components";
 import NavDots from "./components/NavDots/NavDots";
 import SocialMedia from "./components/Social/SocialMedia";
 import {
@@ -22,8 +22,9 @@ function App() {
         <About />
         <Contributions />
         <Projects />
-        {/* <Footer />
-        <Skills /> */}
+        <Contact />
+        {/* <Footer /> */}
+        {/*        <Skills /> */}
         {/* <NavDots active={true} />
         <SocialMedia /> */}
       </div>

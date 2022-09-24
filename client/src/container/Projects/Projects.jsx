@@ -8,7 +8,7 @@ const Projects = () => {
     const [res, setRes] = useState([])
 
     useEffect(() => {
-        const query = '*[_type == "projects"]'
+        const query = '*[_type == "projects"] | order(display_order)'
         client.fetch(query)
             .then((res) => setRes(res))
             .catch((error) => console.log(error))
@@ -39,7 +39,7 @@ const Projects = () => {
             id='Projects'
             className='flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
             <div className='flex flex-col'>
-                <div className='text-center mt-16 font-bold text-4xl textGradient'>
+                <div className='text-center mt-16 p-2 font-bold text-4xl textGradient'>
                     Projects
                 </div>
 
@@ -64,7 +64,7 @@ const Projects = () => {
                     <motion.div
                         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
-                        className='flex flex-col items-center gap-3' >
+                        className='flex flex-col overflow-y-scroll items-center gap-3' >
                         {res.map((element, index) => {
                             return (
                                 <>

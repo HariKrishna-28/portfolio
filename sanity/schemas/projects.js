@@ -9,13 +9,13 @@ export default {
       type: "string",
     },
     {
-      name: "description",
-      title: "Description",
+      name: "tagline",
+      title: "Tagline",
       type: "string",
     },
     {
-      name: "tagline",
-      title: "Tagline",
+      name: "description",
+      title: "Description",
       type: "string",
     },
     {
@@ -35,6 +35,11 @@ export default {
       // options: {
       //   accept: "video/mp4",
       // },
+    },
+    {
+      name: "display_order",
+      title: "DisplayOrder",
+      type: "number",
     },
     {
       name: "tech_stack",

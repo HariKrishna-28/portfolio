@@ -23,7 +23,7 @@ const About = () => {
                 <div className='flex justify-center text-secondaryText'>
                     <div className='w-full md:w-3/4 lg:w-3/4 text-justify font-semibold text-2xl '>
                         I am a self taught <span className='font-extrabold textGradient'>full stack MERN developer</span> with a passion for creating beautiful and functional web applicartions
-                        . I seek challenging opportunities where I can fully use my skills to the success of the organisation.
+                        . I seek challenging opportunities where I can fully use my skills for the success of the organisation.
                     </div>
                 </div>
             </motion.div>
