@@ -44,11 +44,11 @@ const Header = () => {
                 whileInView={{ y: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
             >
-                <div className='bg-gradient-to-t from-backgroundColor to-secondaryBackground p-3 shadow-xl rounded-full overflow-hidden'>
+                <div className='bg-gradient-to-t from-backgroundColor to-secondaryBackground mt-1  overflow-hidden shadow-xl rounded-full '>
                     <motion.div
                         whileInView={{ y: [+150, 0], opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}>
-                        <img src={ProfilePic} alt="pp" draggable="false" />
+                        <img src={ProfilePic} alt="" draggable="false" />
                     </motion.div>
                 </div>
             </motion.div>
