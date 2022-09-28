@@ -2,10 +2,29 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ProjectCard, ProjectFlip } from '../../components'
 import { client } from '../../client'
-
+import Pagination from '@mui/material/Pagination';
 
 const Projects = () => {
     const [res, setRes] = useState([])
+    const [page, setPage] = useState(0)
+
+    // const handlePageChange = (pageNo) => {
+    //     setPage(pageNo - 1)
+    //     document.getElementById(pageNo - 1).scrollIntoView({
+    //         behavior: 'smooth',
+    //         block: 'center',
+    //         inline: 'center',
+    //     })
+    // }
+
+    const handleChange = (event, value) => {
+        setPage(value);
+        document.getElementById(value - 1).scrollIntoView({
+            behavior: 'smooth',
+            // block: 'center',
+            // inline: 'center',
+        })
+    };
 
     useEffect(() => {
         const query = '*[_type == "projects"] | order(display_order)'
@@ -61,7 +80,7 @@ const Projects = () => {
                     </motion.div>
                 </div> */}
 
-                <div className='hidden h-[450px] flex-grow mt-5 overflow-y-scroll scrollbar-hide  md:flex items-center justify-center lg:flex w-full rounded'>
+                <div className='hidden h-[500px] flex-grow overflow-y-scroll scrollbar-hide md:flex items-center justify-center lg:flex w-full rounded'>
                     <div
                         // whileInView={{ opacity: [0, 1] }}
                         // transition={{ duration: 0.5 }}
@@ -103,7 +122,18 @@ const Projects = () => {
                 </div>
                 {/* </div> */}
             </div>
-
+            <div className='hidden lg:flex md:flex justify-center p-3'>
+                <Pagination
+                    defaultPage={page}
+                    shape="rounded"
+                    page={page}
+                    count={res.length}
+                    sx={{
+                        color: "white"
+                    }}
+                    onChange={handleChange}
+                />
+            </div>
         </div >
     )
 }

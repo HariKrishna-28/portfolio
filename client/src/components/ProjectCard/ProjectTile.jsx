@@ -5,7 +5,7 @@ import { Tooltip, Zoom } from '@mui/material';
 
 
 const ProjectTile = ({ data, alignment }) => {
-    const { title, description, github, name, site, tagline, tech_stack, walkthrough } = data
+    const { description, github, name, site, tagline, tech_stack, walkthrough } = data
     const align = !alignment ? "flex-row-reverse" : "flex-row"
     return (
         <div className='flex items-center justify-center'>

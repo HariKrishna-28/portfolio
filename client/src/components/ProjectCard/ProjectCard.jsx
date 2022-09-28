@@ -9,7 +9,7 @@ const ProjectCard = ({ data }) => {
             {
                 data.map((element, index) => {
                     return (
-                        <div className=''>
+                        <div id={index}>
                             <ProjectTile
                                 key={index}
                                 data={element}
