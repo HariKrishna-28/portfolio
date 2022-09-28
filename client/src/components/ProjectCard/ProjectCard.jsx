@@ -1,24 +1,27 @@
 import React from 'react'
+import ProjectTile from './ProjectTile'
 
-const ProjectCard = ({ data, alignment }) => {
-    const { title, description, github, name, site, tagline, tech_stack, walkthrough } = data
-    const align = alignment ? "flex-row" : "flex-row-reverse"
+const ProjectCard = ({ data }) => {
+
 
     return (
-        // <div className=''>
-        <div className={`flex ${align} p-10 w-full bg-secondaryBackground rounded gap-5 justify-evenly`}>
-            <div className='flex flex-col justify-around gap-2'>
-                <div>
-                    {name}
-                </div>
-                <div>
-                    <video src={walkthrough} className="rounded w-[150px]" autoPlay loop />
-                </div>
-            </div>
-            <div>
-                {tagline}
-            </div>
+        <div className='flex-flex-col gap-4 p-3'>
+            {
+                data.map((element, index) => {
+                    return (
+                        <div className=''>
+                            <ProjectTile
+                                key={index}
+                                data={element}
+                                alignment={index % 2 === 0}
+                            />
+                        </div>
+                    )
+                })
+            }
         </div>
+        // <div className=''>
+
         // </div>
     )
 }

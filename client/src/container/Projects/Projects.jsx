@@ -61,13 +61,16 @@ const Projects = () => {
                     </motion.div>
                 </div> */}
 
-                <div className='hidden flex-grow mt-5 overflow-y-scroll scrollbar-hide  md:flex items-center justify-center lg:flex w-full rounded'>
-                    <motion.div
-                        whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
-                        transition={{ duration: 0.5 }}
-                        className='w-full h-64'
+                <div className='hidden h-[450px] flex-grow mt-5 overflow-y-scroll scrollbar-hide  md:flex items-center justify-center lg:flex w-full rounded'>
+                    <div
+                        // whileInView={{ opacity: [0, 1] }}
+                        // transition={{ duration: 0.5 }}
+                        className='w-full h-full p-10'
                     >
-                        {
+                        <ProjectCard
+                            data={res}
+                        />
+                        {/* {
                             res.map((element, index) => {
                                 return (
                                     <ProjectCard
@@ -77,8 +80,8 @@ const Projects = () => {
                                     />
                                 )
                             })
-                        }
-                    </motion.div>
+                        } */}
+                    </div>
                 </div>
 
                 <div className='container flex flex-col md:hidden lg:hidden h-1/4 scrollbar-hide overflow-y-scroll p-10 '>
