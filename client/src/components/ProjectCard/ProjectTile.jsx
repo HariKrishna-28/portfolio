@@ -2,15 +2,19 @@ import React from 'react'
 import TechStack from '../../constants/TechStack'
 import { ArrowBack, GitHub, OpenInNew } from '@mui/icons-material';
 import { Tooltip, Zoom } from '@mui/material';
-
+import { motion } from 'framer-motion'
 
 const ProjectTile = ({ data, alignment }) => {
     const align = !alignment ? "flex-row-reverse" : "flex-row"
     return (
-        <div className='flex items-center justify-center'>
-            <div className={`flex ${align} w-[80%] bg-secondaryBackground mb-5 p-10 rounded justify-between`}>
-                <div className='flex flex-col justify-between gap-2'>
-                    <div className='flex justify-between items-center'>
+        <motion.div
+            whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
+            // x: [-100, 0],
+            transition={{ duration: 0.5 }}
+            className='flex items-center h-[400px] justify-center'>
+            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground p-8 rounded justify-between`}>
+                <div className='flex flex-col justify-around gap-2'>
+                    <div className='flex justify-around items-center'>
                         <div className='font-bold text-2xl text-white'>
                             {data?.name}
                         </div>
@@ -82,7 +86,7 @@ const ProjectTile = ({ data, alignment }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

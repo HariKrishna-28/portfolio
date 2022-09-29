@@ -80,11 +80,11 @@ const Projects = () => {
                     </motion.div>
                 </div> */}
 
-                <div className='hidden h-[500px] flex-grow overflow-y-scroll scrollbar-hide md:flex items-center justify-center lg:flex w-full rounded'>
+                <div className='hidden h-auto flex-grow overflow-y-scroll scrollbar-hide md:flex items-center justify-center lg:flex w-full rounded'>
                     <div
                         // whileInView={{ opacity: [0, 1] }}
                         // transition={{ duration: 0.5 }}
-                        className='w-full h-full p-10'
+                        className='w-full h-full p-1'
                     >
                         <ProjectCard
                             data={res}

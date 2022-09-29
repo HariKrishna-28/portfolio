@@ -16,18 +16,19 @@ const ProjectCard = ({ data, page }) => {
     }, [data, page])
 
     return (
-        <div className='flex-flex-col gap-4 p-3'>
+        <div className='flex-flex-col h-full gap-4 p-3'>
             {
                 show &&
-                <motion.div
-                    whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
-                    // x: [-100, 0],
-                    transition={{ duration: 0.5 }}>
+                <div
+                // whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
+                // // x: [-100, 0],
+                // transition={{ duration: 0.5 }}
+                >
                     <ProjectTile
                         data={pdata}
                         alignment={page % 2 === 0}
                     />
-                </motion.div>
+                </div>
             }
             {/* {
                 data.map((element, index) => {
