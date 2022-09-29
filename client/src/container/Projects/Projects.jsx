@@ -6,7 +6,7 @@ import Pagination from '@mui/material/Pagination';
 
 const Projects = () => {
     const [res, setRes] = useState([])
-    const [page, setPage] = useState(0)
+    const [page, setPage] = useState(1)
 
     // const handlePageChange = (pageNo) => {
     //     setPage(pageNo - 1)
@@ -19,11 +19,11 @@ const Projects = () => {
 
     const handleChange = (event, value) => {
         setPage(value);
-        document.getElementById(value - 1).scrollIntoView({
-            behavior: 'smooth',
-            // block: 'center',
-            // inline: 'center',
-        })
+        // document.getElementById(value - 1).scrollIntoView({
+        //     behavior: 'smooth',
+        //     // block: 'center',
+        //     // inline: 'center',
+        // })
     };
 
     useEffect(() => {
@@ -88,6 +88,7 @@ const Projects = () => {
                     >
                         <ProjectCard
                             data={res}
+                            page={page}
                         />
                         {/* {
                             res.map((element, index) => {
@@ -124,13 +125,16 @@ const Projects = () => {
             </div>
             <div className='hidden lg:flex md:flex justify-center p-3'>
                 <Pagination
-                    defaultPage={page}
+                    // defaultPage={page}
                     shape="rounded"
                     page={page}
                     count={res.length}
-                    sx={{
-                        color: "white"
-                    }}
+                    className="bg-secondaryBackground p-1 rounded-lg"
+                    // sx={{
+                    //     background: "#40A1FE",
+                    //     p: "2px",
+                    //     text: "white"
+                    // }}
                     onChange={handleChange}
                 />
             </div>
