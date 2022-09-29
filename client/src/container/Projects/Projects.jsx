@@ -1,11 +1,30 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ProjectFlip } from '../../components'
+import { ProjectCard, ProjectFlip } from '../../components'
 import { client } from '../../client'
-
+import Pagination from '@mui/material/Pagination';
 
 const Projects = () => {
     const [res, setRes] = useState([])
+    const [page, setPage] = useState(0)
+
+    // const handlePageChange = (pageNo) => {
+    //     setPage(pageNo - 1)
+    //     document.getElementById(pageNo - 1).scrollIntoView({
+    //         behavior: 'smooth',
+    //         block: 'center',
+    //         inline: 'center',
+    //     })
+    // }
+
+    const handleChange = (event, value) => {
+        setPage(value);
+        document.getElementById(value - 1).scrollIntoView({
+            behavior: 'smooth',
+            // block: 'center',
+            // inline: 'center',
+        })
+    };
 
     useEffect(() => {
         const query = '*[_type == "projects"] | order(display_order)'
@@ -38,12 +57,12 @@ const Projects = () => {
         <div
             id='Projects'
             className='flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
-            <div className='flex flex-col'>
+            <div className='flex flex-col w-full'>
                 <div className='text-center mt-16 p-2 font-bold text-4xl textGradient'>
                     Projects
                 </div>
 
-                <div className='hidden md:flex lg:flex container scrollbar-hide overflow-x-scroll p-8 '>
+                {/* <div className='hidden md:flex lg:flex container scrollbar-hide overflow-x-scroll p-8 '>
                     <motion.div
                         whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
@@ -59,10 +78,34 @@ const Projects = () => {
                             )
                         })}
                     </motion.div>
+                </div> */}
+
+                <div className='hidden h-[500px] flex-grow overflow-y-scroll scrollbar-hide md:flex items-center justify-center lg:flex w-full rounded'>
+                    <div
+                        // whileInView={{ opacity: [0, 1] }}
+                        // transition={{ duration: 0.5 }}
+                        className='w-full h-full p-10'
+                    >
+                        <ProjectCard
+                            data={res}
+                        />
+                        {/* {
+                            res.map((element, index) => {
+                                return (
+                                    <ProjectCard
+                                        key={index}
+                                        data={element}
+                                        alignment={index % 2 === 0}
+                                    />
+                                )
+                            })
+                        } */}
+                    </div>
                 </div>
+
                 <div className='container flex flex-col md:hidden lg:hidden h-1/4 scrollbar-hide overflow-y-scroll p-10 '>
                     <motion.div
-                        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                        whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
                         className='flex flex-col overflow-y-scroll items-center gap-3' >
                         {res.map((element, index) => {
@@ -79,7 +122,18 @@ const Projects = () => {
                 </div>
                 {/* </div> */}
             </div>
-
+            <div className='hidden lg:flex md:flex justify-center p-3'>
+                <Pagination
+                    defaultPage={page}
+                    shape="rounded"
+                    page={page}
+                    count={res.length}
+                    sx={{
+                        color: "white"
+                    }}
+                    onChange={handleChange}
+                />
+            </div>
         </div >
     )
 }
