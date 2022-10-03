@@ -22,3 +22,5 @@ export { default as Redux } from "./icons/redux.svg";
 export { default as ReactRouter } from "./icons/react-router.svg";
 export { default as Disease } from "./icons/disease.png";
 export { default as Auth0 } from "./icons/auth0.svg";
+export { default as ChartJs } from "./icons/chartJs.svg";
+export { default as LeafletJs } from "./icons/leaflet.svg";

@@ -12,32 +12,38 @@ const ProjectTile = ({ data, alignment }) => {
             // x: [-100, 0],
             transition={{ duration: 0.5 }}
             className='flex items-center h-[400px] justify-center'>
-            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground p-8 rounded justify-between`}>
+            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground transition-all duration-400 ease-out p-8 rounded justify-between`}>
                 <div className='flex flex-col justify-around gap-2'>
                     <div className='flex justify-around items-center'>
                         <div className='font-bold text-2xl text-white'>
                             {data?.name}
                         </div>
-                        <div className='flex flex-row items-center gap-5'>
-                            <a href={data?.github} target="_blank" rel="noopener noreferrer">
-                                <Tooltip
-                                    placement="bottom"
-                                    TransitionComponent={Zoom}
-                                    TransitionProps={{ timeout: 400 }}
-                                    title="View Repository">
-                                    <GitHub className='h-6 cursor-pointer' />
-                                </Tooltip>
-                            </a>
-                            <a href={data?.site} target="_blank" rel="noopener noreferrer">
-                                <Tooltip
-                                    placement="bottom"
-                                    TransitionComponent={Zoom}
-                                    TransitionProps={{ timeout: 400 }}
-                                    title="Launch site">
-                                    <OpenInNew className='h-6 cursor-pointer' />
-                                </Tooltip>
-
-                            </a>
+                        <div className='flex flex-row items-center gap-3'>
+                            <Tooltip
+                                placement="bottom"
+                                TransitionComponent={Zoom}
+                                TransitionProps={{ timeout: 400 }}
+                                title="View Repository">
+                                <a
+                                    href={data?.github}
+                                    target="_blank"
+                                    className='p-1.5 text-secondaryText transition-all duration-400 ease-out hover:text-white hover:bg-backgroundColor rounded-lg' rel="noopener noreferrer">
+                                    <GitHub className='h-6' />
+                                </a>
+                            </Tooltip>
+                            <Tooltip
+                                placement="bottom"
+                                TransitionComponent={Zoom}
+                                TransitionProps={{ timeout: 400 }}
+                                title="Launch site">
+                                <a
+                                    className='p-1.5 text-secondaryText hover:text-white hover:bg-backgroundColor rounded-lg'
+                                    href={data?.site}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <OpenInNew className='h-6 text-secondaryText hover:text-white cursor-pointer' />
+                                </a>
+                            </Tooltip>
                         </div>
                     </div>
                     <div>

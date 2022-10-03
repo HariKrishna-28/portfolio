@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { Tooltip, Zoom } from '@mui/material'
 import {
     Auth0,
-    Axios, BootStrap, Css, Disease, Express, Firebase, Git, Html,
-    JavaScript, Mongo, MUI, MySql, NodeJs, Python, ReactJs, ReactRouter,
+    Axios, BootStrap, ChartJs, Css, Disease, Express, Firebase, Git, Html,
+    JavaScript, LeafletJs, Mongo, MUI, MySql, NodeJs, Python, ReactJs, ReactRouter,
     Redux, Tailwind, Typescript
 } from "../assets";
 
@@ -111,6 +111,16 @@ const stackExport = [
         name: 'Auth0',
         address: Auth0,
         documentation: "https://auth0.com/docs/"
+    },
+    {
+        name: 'ChartJs',
+        address: ChartJs,
+        documentation: "https://www.chartjs.org/docs/latest/"
+    },
+    {
+        name: 'LeafletJs',
+        address: LeafletJs,
+        documentation: "https://leafletjs.com/reference.html"
     },
 
 
