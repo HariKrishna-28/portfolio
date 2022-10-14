@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TechStack from '../../constants/TechStack'
-import { ArrowBack, GitHub, OpenInNew } from '@mui/icons-material';
+import { GitHub, OpenInNew } from '@mui/icons-material';
 import { Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
+import LoadingScreen from '../Loader/LoadingScreen';
 
 const ProjectTile = ({ data, alignment }) => {
     const align = !alignment ? "flex-row-reverse" : "flex-row"
+    const [showVideo, setShow] = useState(false)
+
     return (
         <motion.div
             whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
             // x: [-100, 0],
             transition={{ duration: 0.5 }}
             className='flex items-center h-[400px] justify-center'>
-            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground transition-all duration-400 ease-out p-8 rounded justify-between`}>
-                <div className='flex flex-col justify-around gap-2'>
-                    <div className='flex justify-around items-center'>
+            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground p-8 rounded justify-between`}>
+                <div className={`flex flex-col ${!showVideo ? "justify-center gap-3" : "justify-evenly gap-2"}`}>
+                    <div className='flex justify-between items-center'>
                         <div className='font-bold text-2xl text-white'>
                             {data?.name}
                         </div>
@@ -46,8 +49,26 @@ const ProjectTile = ({ data, alignment }) => {
                             </Tooltip>
                         </div>
                     </div>
-                    <div>
-                        <video src={data?.walkthrough} className="rounded w-[380px]" autoPlay loop />
+                    <div className='h-auto'>
+                        {
+                            !showVideo &&
+                            <div
+                                className='flex flex-col items-center justify-center'
+                            >
+                                <LoadingScreen />
+                            </div>
+                        }
+                        <video
+                            id='video'
+                            src={data?.walkthrough}
+                            className="rounded w-[380px]"
+                            // onLoadStart={() => setShow(false)}
+                            // onLoadedData={() => setShow(true)}
+                            autoPlay
+                            controls
+                            loop
+                        />
+
                     </div>
                     {/* <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
                         {
@@ -71,10 +92,10 @@ const ProjectTile = ({ data, alignment }) => {
                     <div className='text-justify text-secondaryText'>
                         {data?.description}
                     </div>
-                    <div className='flex flex-row items-center justify-center w-full'>
-                        {/* <div>
-                            Built using
-                        </div> */}
+                    <div className='flex flex-col items-center justify-center w-full'>
+                        <div className='text-secondaryText'>
+                            Built with
+                        </div>
                         <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
                             {
                                 data?.tech_stack.map((element, index) => {
