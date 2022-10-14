@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import TechStack from '../../constants/TechStack'
 import { GitHub, OpenInNew } from '@mui/icons-material';
-import { Tooltip, Zoom } from '@mui/material';
+import { CircularProgress, Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
 import LoadingScreen from '../Loader/LoadingScreen';
 
 const ProjectTile = ({ data, alignment }) => {
     const align = !alignment ? "flex-row-reverse" : "flex-row"
-    // const [showVideo, setShow] = useState(false)
+    const [showVideo, setShow] = useState(false)
 
     return (
         <motion.div
@@ -54,21 +54,22 @@ const ProjectTile = ({ data, alignment }) => {
                             id='video'
                             src={data?.walkthrough}
                             className="rounded w-[380px]"
-                            // onLoadStart={() => setShow(false)}
-                            // onLoadedData={() => setShow(true)}
+                            onLoadStart={() => setShow(false)}
+                            onLoadedData={() => setShow(true)}
                             autoPlay
-                            controls
+                            // controls
                             loop
                         />
 
-                        {/* {
+                        {
                             !showVideo &&
                             <div
                                 className='flex flex-col items-center -mt-44 justify-center'
                             >
-                                <LoadingScreen />
+                                {/* <LoadingScreen /> */}
+                                <CircularProgress />
                             </div>
-                        } */}
+                        }
 
 
                     </div>
