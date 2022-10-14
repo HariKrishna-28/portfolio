@@ -4,13 +4,13 @@ import { Npm } from '../../../assets'
 
 const FrontSide = ({ flipCard, title }) => {
     return (
-        <motion.div
+        <div
             // style={{ height: "100px", width: "100px" }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, rotateX: 360, }}
-            exit={{ opacity: 0 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1, rotateX: 360, }}
+            // exit={{ opacity: 0 }}
 
-            transition={{ duration: 1 }}
+            // transition={{ duration: 1 }}
             className='bg-secondaryBackground text-textColor  h-64 w-64 p-3 flex-flex-col  rounded-lg shadow-lg'>
             <div className='flex flex-col h-full items-center justify-evenly'>
                 <div className='p-3 flex items-center justify-center'>
@@ -28,7 +28,7 @@ const FrontSide = ({ flipCard, title }) => {
                     </button>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
