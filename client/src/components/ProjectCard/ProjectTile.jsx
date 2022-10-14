@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import TechStack from '../../constants/TechStack'
-import { ArrowBack, GitHub, OpenInNew } from '@mui/icons-material';
-import { CircularProgress, Skeleton, Tooltip, Zoom } from '@mui/material';
+import { GitHub, OpenInNew } from '@mui/icons-material';
+import { Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
-import ReactPlayer from 'react-player'
 import LoadingScreen from '../Loader/LoadingScreen';
 
 const ProjectTile = ({ data, alignment }) => {
@@ -16,7 +15,7 @@ const ProjectTile = ({ data, alignment }) => {
             // x: [-100, 0],
             transition={{ duration: 0.5 }}
             className='flex items-center h-[400px] justify-center'>
-            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground transition-all duration-400 ease-out p-8 rounded justify-between`}>
+            <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground p-8 rounded justify-between`}>
                 <div className={`flex flex-col ${!showVideo ? "justify-center gap-3" : "justify-evenly gap-2"}`}>
                     <div className='flex justify-between items-center'>
                         <div className='font-bold text-2xl text-white'>
@@ -60,16 +59,13 @@ const ProjectTile = ({ data, alignment }) => {
                             </div>
                         }
                         <video
-                            onLoadStart={() => {
-                                setShow(false)
-                            }}
-                            onLoadedData={() => {
-                                setShow(true)
-                            }}
                             id='video'
                             src={data?.walkthrough}
                             className="rounded w-[380px]"
+                            // onLoadStart={() => setShow(false)}
+                            // onLoadedData={() => setShow(true)}
                             autoPlay
+                            controls
                             loop
                         />
 
@@ -96,10 +92,10 @@ const ProjectTile = ({ data, alignment }) => {
                     <div className='text-justify text-secondaryText'>
                         {data?.description}
                     </div>
-                    <div className='flex flex-row items-center justify-center w-full'>
-                        {/* <div>
-                            Built using
-                        </div> */}
+                    <div className='flex flex-col items-center justify-center w-full'>
+                        <div className='text-secondaryText'>
+                            Built with
+                        </div>
                         <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
                             {
                                 data?.tech_stack.map((element, index) => {
