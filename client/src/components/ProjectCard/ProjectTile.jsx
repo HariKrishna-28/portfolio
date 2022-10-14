@@ -7,7 +7,7 @@ import LoadingScreen from '../Loader/LoadingScreen';
 
 const ProjectTile = ({ data, alignment }) => {
     const align = !alignment ? "flex-row-reverse" : "flex-row"
-    const [showVideo, setShow] = useState(false)
+    // const [showVideo, setShow] = useState(false)
 
     return (
         <motion.div
@@ -16,7 +16,7 @@ const ProjectTile = ({ data, alignment }) => {
             transition={{ duration: 0.5 }}
             className='flex items-center h-[400px] justify-center'>
             <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground p-8 rounded justify-between`}>
-                <div className={`flex flex-col ${!showVideo ? "justify-center gap-3" : "justify-evenly gap-2"}`}>
+                <div className="flex flex-col justify-evenly gap-2">
                     <div className='flex justify-between items-center'>
                         <div className='font-bold text-2xl text-white'>
                             {data?.name}
@@ -49,15 +49,7 @@ const ProjectTile = ({ data, alignment }) => {
                             </Tooltip>
                         </div>
                     </div>
-                    <div className='h-auto'>
-                        {
-                            !showVideo &&
-                            <div
-                                className='flex flex-col items-center justify-center'
-                            >
-                                <LoadingScreen />
-                            </div>
-                        }
+                    <div className='h-full flex flex-col items-center justify-center'>
                         <video
                             id='video'
                             src={data?.walkthrough}
@@ -68,6 +60,16 @@ const ProjectTile = ({ data, alignment }) => {
                             controls
                             loop
                         />
+
+                        {/* {
+                            !showVideo &&
+                            <div
+                                className='flex flex-col items-center -mt-44 justify-center'
+                            >
+                                <LoadingScreen />
+                            </div>
+                        } */}
+
 
                     </div>
                     {/* <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
