@@ -10,20 +10,20 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, rotateX: 360 }}
+            // animate={{ opacity: 1, rotateX: 360 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className='bg-secondaryBackground text-textColor p-2 h-72 w-72 lg:h[400px] lg:w-[400px] md:h-[400px] md:w-[400px] rounded-lg shadow-lg'>
-            <div className='flex flex-col items-center justify-evenly h-full'>
-                <div className='h-1/3 overflow-auto scrollbar-hide'>
-                    <div className='p-2 font-sm text-justify text-secondaryText'>
+            <div className='flex flex-col items-center h-full justify-evenly'>
+                <div className='overflow-auto h-1/3 scrollbar-hide'>
+                    <div className='p-2 text-justify font-sm text-secondaryText'>
                         {description}
                     </div>
                 </div>
 
                 <div className='w-full -mt-4'>
-                    {/* <div className='text-center font-semibold'>Project links</div> */}
-                    <div className='flex flex-row mt-2 items-center justify-center gap-3'>
+                    {/* <div className='font-semibold text-center'>Project links</div> */}
+                    <div className='flex flex-row items-center justify-center gap-3 mt-2'>
                         <a href={github} target="_blank" rel="noopener noreferrer">
                             <Tooltip
                                 placement="bottom"
@@ -47,8 +47,8 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
                     </div>
                 </div>
 
-                <div className='text-center font-semibold'>Built Using</div>
-                <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
+                <div className='font-semibold text-center'>Built Using</div>
+                <div className='flex flex-row items-center justify-center w-full gap-3 p-3 overflow-x-auto  scrollbar-hide'>
                     {
                         ts.map((element, index) => {
                             return (
@@ -72,7 +72,7 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
                     </div>
                 </Tooltip>
                 {/* <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
                     onClick={flipCard}
                 >
                 </button> */}

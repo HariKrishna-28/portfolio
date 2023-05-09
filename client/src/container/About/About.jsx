@@ -21,9 +21,10 @@ const About = () => {
                 // x: [-100, 0],
                 transition={{ duration: 0.5 }}>
                 <div className='flex justify-center text-secondaryText'>
-                    <div className='w-full text-2xl font-semibold text-justify md:w-3/4 lg:w-3/4 '>
-                        I am a self taught <span className='font-extrabold textGradient'>full stack MERN developer</span> with a passion for creating beautiful and functional web applications
-                        . I seek challenging opportunities where I can fully use my skills for the success of the organisation.
+                    <div className='w-full text-sm font-semibold text-justify md:text-2xl lg:text-2xl md:w-3/4 lg:w-3/4 '>
+                        I am a self taught <span className='font-extrabold textGradient'>full stack developer</span> with a passion for creating beautiful and functional web applications.
+                        What I love most about web development is the constant challenge of keeping up with new technologies and techniques. I am always eager to learn and experiment with new tools and frameworks to improve my expertise.
+                        Whether it's building a simple landing page or a complex web application, I am committed to delivering high-quality results. With my passion for web development and eagerness to learn, I am confident that I can tackle any project and create something truly amazing.
                     </div>
                 </div>
             </motion.div>

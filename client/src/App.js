@@ -14,8 +14,8 @@ import {
 function App() {
   return (
     <div>
-      <div className="flex overflow-hidden bg-backgroundColor gap-5 text-textColor flex-col select-none">
-        <div className="w-full fixed z-50">
+      <div className="flex flex-col gap-5 overflow-hidden select-none bg-backgroundColor text-textColor">
+        <div className="fixed z-50 w-full">
           <NavBar />
         </div>
         <Header />
