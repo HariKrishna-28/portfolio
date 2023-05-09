@@ -56,13 +56,13 @@ const Projects = () => {
     return (
         <div
             id='Projects'
-            className='flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
+            className='flex flex-col items-center justify-center snap-y snap-mandatory scroll-smooth lg:h-screen md:h-screen'>
             <div className='flex flex-col w-full'>
-                <div className='text-center mt-16 p-2 font-bold text-4xl textGradient'>
+                <div className='p-2 mt-16 text-4xl font-bold text-center textGradient'>
                     Projects
                 </div>
 
-                {/* <div className='hidden md:flex lg:flex container scrollbar-hide overflow-x-scroll p-8 '>
+                {/* <div className='container hidden p-8 overflow-x-scroll md:flex lg:flex scrollbar-hide '>
                     <motion.div
                         whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
@@ -80,7 +80,7 @@ const Projects = () => {
                     </motion.div>
                 </div> */}
 
-                <div className='hidden h-auto flex-grow overflow-y-scroll scrollbar-hide md:flex items-center justify-center lg:flex w-full rounded'>
+                <div className='items-center justify-center flex-grow hidden w-full h-auto overflow-y-scroll rounded scrollbar-hide md:flex lg:flex'>
                     <div
                         // whileInView={{ opacity: [0, 1] }}
                         // transition={{ duration: 0.5 }}
@@ -104,11 +104,11 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className='container flex flex-col md:hidden lg:hidden h-1/4 scrollbar-hide overflow-y-scroll p-10 '>
+                <div className='container flex flex-col p-10 overflow-y-scroll md:hidden lg:hidden h-1/4 scrollbar-hide '>
                     <motion.div
                         whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
-                        className='flex flex-col overflow-y-scroll items-center gap-3' >
+                        className='flex flex-col items-center gap-3 overflow-y-scroll' >
                         {res.map((element, index) => {
                             return (
                                 <>
@@ -123,13 +123,13 @@ const Projects = () => {
                 </div>
                 {/* </div> */}
             </div>
-            <div className='hidden lg:flex md:flex justify-center p-3'>
+            <div className='justify-center hidden p-3 lg:flex md:flex'>
                 <Pagination
                     // defaultPage={page}
                     shape="rounded"
                     page={page}
                     count={res.length}
-                    className="bg-secondaryBackground p-1 rounded-lg"
+                    className="p-1 rounded-lg bg-secondaryBackground"
                     // sx={{
                     //     background: "#40A1FE",
                     //     p: "2px",

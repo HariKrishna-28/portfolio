@@ -1,5 +1,5 @@
 import React from 'react'
-import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MySql, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
+import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MySql, NextJs, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
 import { Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
 
@@ -37,9 +37,13 @@ const Ts = () => {
             address: Mongo,
         },
         {
-            name: 'HTML',
-            address: Html,
+            name: 'NextJs',
+            address: NextJs
         },
+        // {
+        //     name: 'HTML',
+        //     address: Html,
+        // },
         {
             name: 'CSS',
             address: Css,
@@ -63,7 +67,8 @@ const Ts = () => {
         {
             name: 'MySQL',
             address: MySql
-        }
+        },
+
     ]
 
     return (
@@ -83,7 +88,13 @@ const Ts = () => {
                                 whileHover={{ scale: 1.5 }}
                                 transition={{ duration: 0.3, type: 'tween' }}
                             >
-                                <img src={address} alt="" className='w-8' draggable="false" />
+                                <div className='p-1 overflow-hidden transition-all duration-75 rounded-full hover:bg-textColor'>
+                                    <img
+                                        src={address}
+                                        alt=""
+                                        className='w-8 bg-transparent'
+                                        draggable="false" />
+                                </div>
                             </motion.div>
                         </Tooltip>
                     )

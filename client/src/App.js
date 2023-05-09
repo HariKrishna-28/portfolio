@@ -23,9 +23,9 @@ function App() {
         <Contributions />
         <Projects />
         <Contact />
-        {/* <Footer /> */}
-        {/*        <Skills /> */}
-        {/* <NavDots active={true} />
+        {/* <Footer />
+        <Skills />
+        <NavDots active={true} />
         <SocialMedia /> */}
       </div>
     </div>

@@ -20,17 +20,17 @@ const Contributions = () => {
     return (
         <div
             id='Contributions'
-            className='  flex flex-col items-center lg:h-screen md:h-screen  justify-center'>
+            className='flex flex-col items-center justify-center snap-y snap-mandatory scroll-smooth lg:h-screen md:h-screen'>
             <div className='flex flex-col gap-10 '>
-                <div className='text-center font-bold text-4xl textGradient'>
+                <div className='text-4xl font-bold text-center textGradient'>
                     Contributions
                 </div>
 
-                <div className='hidden md:flex lg:flex containe p-10 '>
+                <div className='hidden p-10 md:flex lg:flex containe '>
                     <motion.div
                         whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}
-                        className='flex flex-row items-center overflow-x-scroll scrollbar-hide gap-3' >
+                        className='flex flex-row items-center gap-3 overflow-x-scroll scrollbar-hide' >
                         {cont.map((element, index) => {
                             return (
                                 <>
@@ -45,11 +45,11 @@ const Contributions = () => {
                         })}
                     </motion.div>
                 </div>
-                <div className='container flex flex-col md:hidden lg:hidden scrollbar-hide overflow-y-scroll h-1/4  p-10 '>
+                <div className='container flex flex-col p-10 overflow-y-scroll md:hidden lg:hidden scrollbar-hide h-1/4 '>
                     <motion.div
                         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
-                        className='flex flex-col items-center  gap-3' >
+                        className='flex flex-col items-center gap-3' >
                         {cont.map((element, index) => {
                             return (
                                 <>
