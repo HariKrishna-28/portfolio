@@ -104,7 +104,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className='container flex flex-col p-10 overflow-y-scroll md:hidden lg:hidden h-1/4 scrollbar-hide '>
+                <div className='container flex flex-col p-10 overflow-y-scroll lg:hidden h-1/4 scrollbar-hide '>
                     <motion.div
                         whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
                         transition={{ duration: 0.5 }}

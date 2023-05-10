@@ -5,7 +5,7 @@ import ProfilePic from '../../assets/p-removebg-preview.png'
 import WaveGif from '../../assets/icons/wave.gif'
 // import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
 import Ts from './Ts'
-import AppWrap from '../../components/wrapper/AppWrap'
+// import AppWrap from '../../components/wrapper/AppWrap'
 import Typewriter from 'typewriter-effect';
 
 const Header = () => {
@@ -30,13 +30,13 @@ const Header = () => {
                                     <p className='text-3xl text-center text-secondaryText lg:text-start md:text-start'>Hello, I am</p>
                                     <p className='text-5xl font-bold textGradient'>Harikrishna</p>
                                 </div>
-                                <div className='flex items-center justify-start gap-2 mt-1'>
+                                <div className='flex items-center justify-center gap-2 mt-1 md:justify-start lg:justify-start'>
                                     <Typewriter
                                         options={{
                                             strings: ['Javascript', 'Typescript', 'Java', 'Python'],
                                             autoStart: true,
                                             loop: true,
-                                            pauseFor: 100
+                                            pauseFor: 100,
                                         }}
                                     />
                                 </div>

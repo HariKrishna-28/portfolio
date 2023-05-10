@@ -10,7 +10,7 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
-            // animate={{ opacity: 1, rotateX: 360 }}
+            animate={{ opacity: 1, rotateX: 360 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className='bg-secondaryBackground text-textColor p-2 h-72 w-72 lg:h[400px] lg:w-[400px] md:h-[400px] md:w-[400px] rounded-lg shadow-lg'>
@@ -48,7 +48,7 @@ const BackProject = ({ flipCard, github, description, site, ts }) => {
                 </div>
 
                 <div className='font-semibold text-center'>Built Using</div>
-                <div className='flex flex-row items-center justify-center w-full gap-3 p-3 overflow-x-auto  scrollbar-hide'>
+                <div className='flex flex-row items-center justify-center w-full gap-3 p-3 overflow-x-auto scrollbar-hide'>
                     {
                         ts.map((element, index) => {
                             return (

@@ -9,7 +9,7 @@ const FrontProject = ({ flipCard, title, url, desc, tag }) => {
         <motion.div
             // style={{ height: "100px", width: "100px" }}
             initial={{ opacity: 0 }}
-            // animate={{ opacity: 1, rotateX: 360, }}
+            animate={{ opacity: 1, rotateX: 360, }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className='bg-secondaryBackground  text-textColor h-72 w-72 lg:h[400px] lg:w-[400px] md:h-[400px] md:w-[400px] flex-flex-col rounded-lg shadow-lg'>
