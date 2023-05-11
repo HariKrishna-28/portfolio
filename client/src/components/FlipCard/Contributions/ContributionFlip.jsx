@@ -5,7 +5,6 @@ import FrontSide from './FrontSide'
 
 const ContributionFlip = ({ description, github, name, npm }) => {
     const [flipped, setFlipped] = useState(false)
-    console.log(description, github, name, npm)
 
     const flipCard = () => setFlipped(!flipped)
 

@@ -31,10 +31,11 @@ export default {
     {
       name: "walkthrough",
       title: "Walkthrough",
-      type: "string",
-      // options: {
-      //   accept: "video/mp4",
-      // },
+      type: "file",
+      options: {
+        accept: "video/mp4",
+        storeOriginalFilename: true,
+      },
     },
     {
       name: "display_order",

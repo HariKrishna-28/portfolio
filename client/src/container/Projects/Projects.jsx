@@ -27,9 +27,23 @@ const Projects = () => {
     };
 
     useEffect(() => {
-        const query = '*[_type == "projects"] | order(display_order)'
+        const query = `*[_type == "projects"] | order(display_order asc) {
+  name,
+  tagline,
+  description,
+  github,
+  site,
+  'walkthroughUrl': walkthrough.asset->url,
+  display_order,
+  tech_stack
+}
+`
+
         client.fetch(query)
-            .then((res) => setRes(res))
+            .then((res) => {
+                console.log(res)
+                setRes(res)
+            })
             .catch((error) => console.log(error))
     }, [])
 
@@ -82,8 +96,8 @@ const Projects = () => {
 
                 <div className='items-center justify-center flex-grow hidden w-full h-auto overflow-y-scroll rounded scrollbar-hide md:flex lg:flex'>
                     <div
-                        // whileInView={{ opacity: [0, 1] }}
-                        // transition={{ duration: 0.5 }}
+                        whileInView={{ opacity: [0, 1] }}
+                        transition={{ duration: 0.5 }}
                         className='w-full h-full p-1'
                     >
                         <ProjectCard

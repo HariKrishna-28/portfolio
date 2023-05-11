@@ -3,11 +3,17 @@ import TechStack from '../../constants/TechStack'
 import { GitHub, OpenInNew } from '@mui/icons-material';
 import { CircularProgress, Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
-import LoadingScreen from '../Loader/LoadingScreen';
+// import { SanityClient } from '@sanity/client';
+// import LoadingScreen from '../Loader/LoadingScreen';
+import ReactPlayer from 'react-player'
 
 const ProjectTile = ({ data, alignment }) => {
+
     const align = !alignment ? "flex-row-reverse" : "flex-row"
     const [showVideo, setShow] = useState(false)
+    // const url = `https://cdn.sanity.io/files/${process.env.REACT_APP_SANITY_PROJECT_ID}/production/${data?.walkthrough.asset._ref}`
+
+    // const [videoUrl, setVideoUrl] = useS
 
     return (
         <motion.div
@@ -16,9 +22,9 @@ const ProjectTile = ({ data, alignment }) => {
             transition={{ duration: 0.5 }}
             className='flex items-center h-[400px] justify-center'>
             <div className={`flex ${align} w-[80%] h-full bg-secondaryBackground p-8 rounded justify-between`}>
-                <div className="flex flex-col justify-evenly gap-2">
-                    <div className='flex justify-between items-center'>
-                        <div className='font-bold text-2xl text-white'>
+                <div className="flex flex-col gap-2 justify-evenly">
+                    <div className='flex items-center justify-between'>
+                        <div className='text-2xl font-bold text-white'>
                             {data?.name}
                         </div>
                         <div className='flex flex-row items-center gap-3'>
@@ -44,62 +50,33 @@ const ProjectTile = ({ data, alignment }) => {
                                     href={data?.site}
                                     target="_blank"
                                     rel="noopener noreferrer">
-                                    <OpenInNew className='h-6 text-secondaryText hover:text-white cursor-pointer' />
+                                    <OpenInNew className='h-6 cursor-pointer text-secondaryText hover:text-white' />
                                 </a>
                             </Tooltip>
                         </div>
                     </div>
-                    <div className='h-full flex flex-col items-center justify-center'>
-                        <video
-                            id='video'
-                            src={data?.walkthrough}
-                            className="rounded w-[380px]"
-                            onLoadStart={() => setShow(false)}
-                            onLoadedData={() => setShow(true)}
-                            autoPlay
-                            // controls
-                            loop
-                        />
+                    <ReactPlayer
+                        className="rounded"
+                        loop
+                        playing
+                        muted
+                        autoplay
+                        width={"380px"}
+                        url={data?.walkthroughUrl} />
 
-                        {
-                            !showVideo &&
-                            <div
-                                className='flex flex-col items-center -mt-44 justify-center'
-                            >
-                                {/* <LoadingScreen /> */}
-                                <CircularProgress />
-                            </div>
-                        }
-
-
-                    </div>
-                    {/* <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
-                        {
-                            tech_stack.map((element, index) => {
-                                return (
-                                    <>
-                                        <TechStack
-                                            key={index}
-                                            name={element}
-                                        />
-                                    </>
-                                )
-                            })
-                        }
-                    </div> */}
                 </div>
-                <div className='flex flex-col justify-between border-2 border-borderColor rounded-lg w-[calc(100%-400px)] p-3'>
+                <div className='flex flex-col justify-between border-2 border-borderColor overflow-auto scrollbar-hide rounded-lg w-[calc(100%-400px)] p-3'>
                     <div className='font-semibold text-start text-secondaryText'>
                         {data?.tagline}
                     </div>
-                    <div className='text-justify text-secondaryText'>
+                    <div className='text-justify text-secondaryText '>
                         {data?.description}
                     </div>
                     <div className='flex flex-col items-center justify-center w-full'>
                         <div className='text-secondaryText'>
                             Built with
                         </div>
-                        <div className=' w-full flex flex-row p-3 gap-3 items-center justify-center overflow-x-auto  scrollbar-hide'>
+                        <div className='flex flex-row items-center justify-center w-full gap-3 p-3 overflow-x-auto  scrollbar-hide'>
                             {
                                 data?.tech_stack.map((element, index) => {
                                     return (
