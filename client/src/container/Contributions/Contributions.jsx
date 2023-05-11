@@ -23,7 +23,7 @@ const Contributions = () => {
             className='flex flex-col items-center justify-center snap-y snap-mandatory scroll-smooth lg:h-screen md:h-screen'>
             <div className='flex flex-col gap-10 '>
                 <div className='text-4xl font-bold text-center textGradient'>
-                    Contributions
+                    Open source Contributions
                 </div>
 
                 <div className='hidden p-10 md:flex lg:flex containe '>

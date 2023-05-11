@@ -85,16 +85,16 @@ const Ts = () => {
                         >
                             <motion.div
                                 whileInView={{ opacity: 1 }}
-                                whileHover={{ scale: 1.5 }}
+                                whileHover={{ scale: 1.5, rotate: 360 }}
                                 transition={{ duration: 0.3, type: 'tween' }}
                             >
-                                <div className='p-1 overflow-hidden transition-all duration-75 rounded-full hover:bg-textColor'>
-                                    <img
-                                        src={address}
-                                        alt=""
-                                        className='w-8 bg-transparent'
-                                        draggable="false" />
-                                </div>
+                                {/* <div className='p-1 overflow-hidden transition-all duration-75 rounded-full hover:bg-textColor'> */}
+                                <img
+                                    src={address}
+                                    alt=""
+                                    className='w-8 bg-transparent rounded'
+                                    draggable="false" />
+                                {/* </div> */}
                             </motion.div>
                         </Tooltip>
                     )
