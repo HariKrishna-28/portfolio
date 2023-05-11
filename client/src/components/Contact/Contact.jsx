@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 const Contact = () => {
     return (
         <div
-            id='Contact'
+            id='Social'
             className='flex flex-col items-center justify-center h-screen'
         >
             <div className='text-center font-bold text-4xl textGradient'>
-                Contact Me
+                Social
             </div>
             <div className='p-10'>
                 <div className='flex flex-row gap-5'>

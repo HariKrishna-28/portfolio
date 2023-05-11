@@ -70,29 +70,11 @@ const Projects = () => {
     return (
         <div
             id='Projects'
-            className='flex flex-col items-center justify-center snap-y snap-mandatory scroll-smooth lg:h-screen md:h-screen'>
+            className='flex flex-col items-center justify-center snap-y snap-mandatory scroll-smooth'>
             <div className='flex flex-col w-full'>
                 <div className='p-2 mt-16 text-4xl font-bold text-center textGradient'>
                     Projects
                 </div>
-
-                {/* <div className='container hidden p-8 overflow-x-scroll md:flex lg:flex scrollbar-hide '>
-                    <motion.div
-                        whileInView={{ opacity: [0, 1], scale: [0.8, 1] }}
-                        transition={{ duration: 0.5 }}
-                        className='flex flex-row items-center gap-3' >
-                        {res.map((element, index) => {
-                            return (
-                                <>
-                                    <ProjectFlip
-                                        key={index}
-                                        data={element}
-                                    />
-                                </>
-                            )
-                        })}
-                    </motion.div>
-                </div> */}
 
                 <div className='items-center justify-center flex-grow hidden w-full h-auto overflow-y-scroll rounded scrollbar-hide md:flex lg:flex'>
                     <div
@@ -104,17 +86,6 @@ const Projects = () => {
                             data={res}
                             page={page}
                         />
-                        {/* {
-                            res.map((element, index) => {
-                                return (
-                                    <ProjectCard
-                                        key={index}
-                                        data={element}
-                                        alignment={index % 2 === 0}
-                                    />
-                                )
-                            })
-                        } */}
                     </div>
                 </div>
 

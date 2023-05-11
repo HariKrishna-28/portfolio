@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 
-const sections = ['Home', 'About', 'Contributions', 'Projects', 'Contact'];
+const sections = ['Home', 'About', 'Contributions', 'Projects', 'Social'];
 const social = [
     {
         name: 'Github',
