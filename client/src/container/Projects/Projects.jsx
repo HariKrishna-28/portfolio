@@ -40,10 +40,7 @@ const Projects = () => {
 `
 
         client.fetch(query)
-            .then((res) => {
-                console.log(res)
-                setRes(res)
-            })
+            .then((res) => setRes(res))
             .catch((error) => console.log(error))
     }, [])
 

@@ -4,7 +4,6 @@ import FrontProject from './FrontProject'
 
 
 const ProjectFlip = ({ data }) => {
-    console.log(data)
     const [flipped, setFlipped] = useState(false)
 
     const flipCard = () => setFlipped(!flipped)
