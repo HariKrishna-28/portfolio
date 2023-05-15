@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import ReactPlayer from 'react-player/lazy'
-import { Info } from '@mui/icons-material';
+// import ReactPlayer from 'react-player/lazy'
+// import { Info } from '@mui/icons-material';
 // import { getFileAsset } from '@sanity/asset-utils';
 
 const FrontProject = ({ flipCard, title, url, desc, tag }) => {

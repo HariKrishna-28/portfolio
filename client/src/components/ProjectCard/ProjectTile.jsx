@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TechStack from '../../constants/TechStack'
 import { GitHub, OpenInNew } from '@mui/icons-material';
-import { CircularProgress, Tooltip, Zoom } from '@mui/material';
+import { Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
 // import { SanityClient } from '@sanity/client';
 // import LoadingScreen from '../Loader/LoadingScreen';
@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player'
 const ProjectTile = ({ data, alignment }) => {
 
     const align = !alignment ? "flex-row-reverse" : "flex-row"
-    const [showVideo, setShow] = useState(false)
+    // const [showVideo, setShow] = useState(false)
     // const url = `https://cdn.sanity.io/files/${process.env.REACT_APP_SANITY_PROJECT_ID}/production/${data?.walkthrough.asset._ref}`
 
     // const [videoUrl, setVideoUrl] = useS

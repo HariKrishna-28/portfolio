@@ -73,7 +73,7 @@ const Projects = () => {
                     Projects
                 </div>
 
-                <div className='items-center justify-center flex-grow hidden w-full h-auto overflow-y-scroll rounded scrollbar-hide md:flex lg:flex'>
+                <div className='items-center justify-center flex-grow hidden w-full h-auto overflow-y-scroll rounded scrollbar-hide lg:flex'>
                     <div
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
@@ -93,12 +93,10 @@ const Projects = () => {
                         className='flex flex-col items-center gap-3 overflow-y-scroll' >
                         {res.map((element, index) => {
                             return (
-                                <>
-                                    <ProjectFlip
-                                        data={element}
-                                        key={index}
-                                    />
-                                </>
+                                <ProjectFlip
+                                    data={element}
+                                    key={index}
+                                />
                             )
                         })}
                     </motion.div>

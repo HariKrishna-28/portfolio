@@ -7,53 +7,54 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+// import Avatar from '@mui/material/Avatar';
+// import Tooltip from '@mui/material/Tooltip';
 // import AdbIcon from '@mui/icons-material/Adb';
 
 const sections = ['Home', 'About', 'Contributions', 'Projects', 'Social'];
-const social = [
-    {
-        name: 'Github',
-        site: 'https://github.com/HariKrishna-28'
+// const social = [
+//     {
+//         name: 'Github',
+//         site: 'https://github.com/HariKrishna-28'
 
-    },
-    {
-        name: 'Hackerrank',
-        site: 'https://www.hackerrank.com/Harikrishna28'
-    },
-    {
-        name: 'Linkedin',
-        site: 'https://www.linkedin.com/in/harikrishna-c/'
-    },
-    {
-        site: 'Instagram',
-        site: 'https://www.instagram.com/___h28__'
-    }
-]
+//     },
+//     {
+//         name: 'Hackerrank',
+//         site: 'https://www.hackerrank.com/Harikrishna28'
+//     },
+//     {
+//         name: 'Linkedin',
+//         site: 'https://www.linkedin.com/in/harikrishna-c/'
+//     },
+//     {
+//         site: 'Instagram',
+//         site: 'https://www.instagram.com/___h28__'
+//     }
+// ]
 // const social = ['Github', 'Hackerrank', 'Instagram', 'Linkedin'];
 
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+
+    // const handleOpenUserMenu = (event) => {
+    //     setAnchorElUser(event.currentTarget);
+    // };
 
     const handleCloseNavMenu = (section) => {
         setAnchorElNav(null);
         document.getElementById(section).scrollIntoView({ behavior: "smooth" })
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    // const handleCloseUserMenu = () => {
+    //     setAnchorElUser(null);
+    // };
 
     return (
         <AppBar position="sticky" sx={{
@@ -112,8 +113,8 @@ const NavBar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {sections.map((page) => (
-                                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
+                            {sections.map((page, index) => (
+                                <MenuItem key={index} onClick={() => handleCloseNavMenu(page)}>
                                     <a href={`#${page}`}>
                                         <div>
                                             <Typography textAlign="center">{page}</Typography>

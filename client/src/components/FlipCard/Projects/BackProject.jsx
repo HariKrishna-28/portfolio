@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowBack, GitHub, OpenInNew } from '@mui/icons-material';
-import { NpmSquare } from '../../../assets';
+// import { NpmSquare } from '../../../assets';
 import TechStack from '../../../constants/TechStack';
 import { Tooltip, Zoom } from '@mui/material';
 
