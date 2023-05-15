@@ -3,10 +3,27 @@ import { motion } from 'framer-motion'
 import { ProjectCard, ProjectFlip } from '../../components'
 import { client } from '../../client'
 import Pagination from '@mui/material/Pagination';
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 const Projects = () => {
     const [res, setRes] = useState([])
     const [page, setPage] = useState(1)
+
+    const theme = createTheme({
+        components: {
+            MuiPagination: {
+                styleOverrides: {
+                    root: {
+                        '& .MuiPaginationItem-page': {
+                            color: '#FEFEFF',
+                        },
+                    },
+                },
+            },
+        },
+        // your other theme configurations
+    });
 
     // const handlePageChange = (pageNo) => {
     //     setPage(pageNo - 1)
@@ -104,19 +121,21 @@ const Projects = () => {
                 {/* </div> */}
             </div>
             <div className='justify-center hidden p-3 lg:flex md:flex'>
-                <Pagination
-                    // defaultPage={page}
-                    shape="rounded"
-                    page={page}
-                    count={res.length}
-                    className="p-1 rounded-lg bg-secondaryBackground"
-                    // sx={{
-                    //     background: "#40A1FE",
-                    //     p: "2px",
-                    //     text: "white"
-                    // }}
-                    onChange={handleChange}
-                />
+                <ThemeProvider theme={theme}>
+                    <Pagination
+                        // defaultPage={page}
+                        shape="rounded"
+                        page={page}
+                        count={res.length}
+                        className="p-1 rounded-lg bg-secondaryBackground"
+                        // sx={{
+                        //     background: "#40A1FE",
+                        //     // p: "2px",
+                        //     text: "white"
+                        // }}
+                        onChange={handleChange}
+                    />
+                </ThemeProvider>
             </div>
         </div >
     )
