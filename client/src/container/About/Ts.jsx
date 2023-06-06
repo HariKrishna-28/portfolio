@@ -1,5 +1,5 @@
 import React from 'react'
-import { BootStrap, Css, Express, Firebase, Git, Html, JavaScript, Mongo, MySql, NextJs, NodeJs, Python, ReactJs, Tailwind, Typescript } from '../../assets'
+import { BootStrap, Css, Express, FastApi, Firebase, Git, Html, JavaScript, Mongo, MySql, NextJs, NodeJs, Python, ReactJs, ReactNative, Tailwind, Typescript } from '../../assets'
 import { Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
 
@@ -40,21 +40,21 @@ const Ts = () => {
             name: 'NextJs',
             address: NextJs
         },
+        {
+            name: 'FastApi',
+            address: FastApi,
+        },
         // {
         //     name: 'HTML',
         //     address: Html,
         // },
         {
-            name: 'CSS',
-            address: Css,
+            name: 'React Native',
+            address: ReactNative,
         },
         {
             name: 'Python',
             address: Python,
-        },
-        {
-            name: 'Bootstrap',
-            address: BootStrap,
         },
         {
             name: 'TailwindCSS',

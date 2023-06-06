@@ -25,3 +25,5 @@ export { default as Auth0 } from "./icons/auth0.svg";
 export { default as ChartJs } from "./icons/chartJs.svg";
 export { default as LeafletJs } from "./icons/leaflet.svg";
 export { default as NextJs } from "./icons/nextjs.svg";
+export { default as ReactNative } from "./icons/react-native.svg";
+export { default as FastApi } from "./icons/fastapi.svg";
