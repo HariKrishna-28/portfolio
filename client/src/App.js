@@ -13,7 +13,7 @@ import {
 
 function App() {
   return (
-    <div className="select-none bg-gradient-to-b from-gray-900 to-backgroundColor text-textColor">
+    <div className=" bg-gradient-to-b from-gray-900 to-backgroundColor text-textColor">
       <div className="flex flex-col gap-5 overflow-hidden ">
         <div className="fixed z-50 w-full">
           <NavBar />
