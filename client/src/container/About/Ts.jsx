@@ -85,7 +85,7 @@ const Ts = () => {
                         >
                             <motion.div
                                 whileInView={{ opacity: 1 }}
-                                whileHover={{ scale: 1.5, rotate: 180 }}
+                                whileHover={{ scale: 1.5, rotate: 360 }}
                                 transition={{ duration: 0.3, type: 'tween' }}
                             >
                                 {/* <div className='p-1 overflow-hidden transition-all duration-75 rounded-full hover:bg-textColor'> */}
