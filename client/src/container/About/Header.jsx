@@ -53,7 +53,7 @@ const Header = () => {
             >
                 <div className='mt-1 overflow-hidden rounded-full shadow-xl bg-gradient-to-t from-blue-500 to-blue-800 '>
                     <motion.div
-                        whileInView={{ y: [+150, 0], opacity: [0, 1] }}
+                        whileInView={{ y: [+150, 0], opacity: [0, 1], rotate: 360 }}
                         transition={{ duration: 0.5 }}>
                         <img
                             src={ProfilePic}
