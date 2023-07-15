@@ -1,11 +1,11 @@
 import React from 'react'
-import { BootStrap, Css, Express, FastApi, Firebase, Git, Html, JavaScript, Mongo, MySql, NextJs, NodeJs, Python, ReactJs, ReactNative, Tailwind, Typescript } from '../../assets'
+import { Express, FastApi, Firebase, Git, JavaScript, Mongo, MySql, NextJs, NodeJs, Python, ReactJs, ReactNative, Tailwind, Typescript } from '../../assets'
 import { Tooltip, Zoom } from '@mui/material';
 import { motion } from 'framer-motion'
 
 const Ts = () => {
 
-    const tileStyling = "w-8 hover:w-14 hover:-m-3 cursor-pointer"
+    // const tileStyling = "w-8 hover:w-14 hover:-m-3 cursor-pointer"
 
     const techStack = [
         {
