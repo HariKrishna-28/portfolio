@@ -10,10 +10,6 @@ import ReactPlayer from 'react-player'
 const ProjectTile = ({ data, alignment }) => {
 
     const align = !alignment ? "flex-row-reverse" : "flex-row"
-    // const [showVideo, setShow] = useState(false)
-    // const url = `https://cdn.sanity.io/files/${process.env.REACT_APP_SANITY_PROJECT_ID}/production/${data?.walkthrough.asset._ref}`
-
-    // const [videoUrl, setVideoUrl] = useS
 
     return (
         <motion.div
@@ -55,8 +51,9 @@ const ProjectTile = ({ data, alignment }) => {
                             </Tooltip>
                         </div>
                     </div>
+
                     <ReactPlayer
-                        className="rounded"
+                        // className="rounded"
                         loop
                         playing
                         muted
@@ -74,7 +71,7 @@ const ProjectTile = ({ data, alignment }) => {
                     </div>
                     <div className='flex flex-col items-center justify-center w-full'>
                         <div className='text-secondaryText'>
-                            Built with
+                            Built using
                         </div>
                         <div className='flex flex-row items-center justify-center w-full gap-3 p-3 overflow-x-auto  scrollbar-hide'>
                             {
