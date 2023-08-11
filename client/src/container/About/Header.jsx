@@ -11,7 +11,8 @@ const Header = () => {
             id='Home'
             className='flex flex-col items-center justify-center h-screen p-5 mt-4 snap-y snap-mandatory scroll-smooth md:flex-row lg:flex-row lg:justify-evenly'>
             <motion.div
-                //viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                // viewport={{ once: true }}
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
             >
@@ -46,13 +47,15 @@ const Header = () => {
 
 
             <motion.div
+                initial={{ opacity: 0 }}
                 whileInView={{ y: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
-            //viewport={{ once: true }}
+            // viewport={{ once: true }}
             >
                 <div className='mt-1 overflow-hidden rounded-full shadow-xl bg-gradient-to-t from-blue-500 to-blue-800 '>
                     <motion.div
-                        //viewport={{ once: true }}
+                        initial={{ opacity: 0 }}
+                        // viewport={{ once: true }}
                         whileInView={{ y: [+150, 0], opacity: [0, 1], rotate: 180 }}
                         transition={{
                             duration: 0.5,
@@ -69,7 +72,8 @@ const Header = () => {
             </motion.div>
 
             <motion.div
-                //viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                // viewport={{ once: true }}
                 whileInView={{ x: [+100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
             >
