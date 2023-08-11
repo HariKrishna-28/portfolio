@@ -27,7 +27,8 @@ const Header = () => {
                                     <p className='text-3xl text-center text-secondaryText lg:text-start md:text-start'>Hello, I am</p>
                                     <p className='text-5xl font-bold textGradient'>Harikrishna</p>
                                 </div>
-                                <div className='flex items-center justify-center gap-2 mt-1 md:justify-start lg:justify-start'>
+                                <div className='flex items-center justify-center gap-2 mt-1 text-muted md:justify-start lg:justify-start'>
+                                    I code in
                                     <Typewriter
                                         options={{
                                             strings: ['Javascript', 'Typescript', 'Java', 'Python'],
